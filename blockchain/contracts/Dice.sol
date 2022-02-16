@@ -22,7 +22,7 @@ contract TabletopDiceNFT is ERC721URIStorage, Ownable {
     {
         _tokenIds.increment();
 
-        uint256 newItemId = _tokenIds.current();        
+        uint256 newItemId = _tokenIds.current();
         _mint(recipient, newItemId);
         _setTokenURI(newItemId, tokenURI);
 
