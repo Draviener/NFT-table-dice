@@ -1,4 +1,4 @@
-//Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+// contracts/Dice.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -12,9 +12,8 @@ contract TabletopDiceNFT is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    uint8 diceInHand = 1;
 
-    constructor () public ERC721 ("TabletopDiceNFT", "TabletopDice") {
+    constructor () ERC721 ("Tabletop Dice NFT", "DICE") {
     }
 
     function mintNFT(address recipient, string memory tokenURI)
