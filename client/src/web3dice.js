@@ -17,16 +17,7 @@ export const web3dice = {
       store.web3.chain = await this.provider.getNetwork()
     } catch (e) {
       console.log('Error: ' + e.message)
-    } 
-
-    
-    window.ethereum.on('connect', (info) => {
-      console.log('connected callback ' + JSON.stringify(info))
-      store.web3.hasWallet = true
-    })    
-    window.ethereum.on("disconnect", (info) => {
-      console.log('disconnected callback ' +  + JSON.stringify(info))
-    })    
+    }     
 
     this.provider.on("network", (newNetwork, oldNetwork) => {
       console.log('network changed')
@@ -38,21 +29,14 @@ export const web3dice = {
       console.log('block', blockNumber)
     })
 
-    console.log ('Wallet provider found')
-
-    if (this.provider.isConnected) {
-      console.log('is this it')
-    }
-
     store.chainId == this.provider.chainId
 
+    console.log ('Wallet provider found')
   },
-
   
-
   async connect() {
     try {
-      store.accounts = await this.provider.send("eth_requestAccounts", [])
+      store.web3.accounts = await this.provider.send("eth_requestAccounts", [])
     } catch(e) {
       console.log('Error: ' + e.message)
       return
@@ -64,6 +48,7 @@ export const web3dice = {
     })
     store.web3.isConnected = true
   },
+
   getBlock() {
     this.provider.getBlockNumber().then(block => {
       store.block = block
