@@ -8,6 +8,14 @@ export default {
       store
     }
   },
+  computed: {
+    chainName() {
+      if ( store.web3.chain != null) {
+        return store.web3.chain.name
+      }
+      return 'no chain found'
+    }
+  },
   methods: {
     connect() {
       web3dice.connect()
@@ -18,12 +26,18 @@ export default {
 
 <template>
 
-    <div class="wrapper" v-if="store.web3Connected">
-      You are connected. 
-      Welcome back {{ store.address }}
+    <div class="wrapper" v-if="!store.web3.hasWallet">
+      We called out looking for your Web3 wallet provider; but alas, we heard nothing.
+    </div>
+    <div class="wrapper" v-else-if="!store.web3.isConnected">
+      You are connected to: {{ chainName }}.<br />
+      <button @click="connect()">Let's Connect</button>
     </div>
     <div class="wrapper" v-else>
-      <button @click="connect()">Let's go!</button>
+      You are connected to: {{ chainName }}.<br />
+      You are {{ store.address }}
+    </div>
+    <div>
     </div>
 
 </template>
