@@ -4,6 +4,5 @@ export const store = reactive({
   web3Connected: false,
   accounts: null,
   address: '',
-  block: 0,
-  count: 0
+  block: 0
 })
