@@ -1,81 +1,52 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+import { store } from './store.js'
+import { web3dice } from './web3dice.js'
+
+export default {
+  data() {
+    return {
+      store
+    }
+  },
+  computed: {
+    chainName() {
+      if ( store.web3.chain != null) {
+        return store.web3.chain.name
+      }
+      return 'no chain found'
+    }
+  },
+  methods: {
+    connect() {
+      web3dice.connect()
+    }
+  }
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div class="wrapper" v-if="!store.web3.hasWallet">
+      I called out looking for your Web3 wallet provider; but alas, we heard nothing.
     </div>
-  </header>
+    <div class="wrapper" v-else-if="!store.web3.isConnected">
+      I see that you are connected to: {{ chainName }}.<br />
+      But I don't know who you are?<br />
+      <button @click="connect()">Let's Connect</button>
+    </div>
+    <div class="wrapper" v-else>
+      You are connected to: {{ chainName }}.<br />
+      You are {{ store.address }}
+    </div>
+    <div>
+    </div>
 
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style>
 @import './assets/base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+  text-align: center
 }
 </style>
