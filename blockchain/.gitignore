@@ -6,4 +6,7 @@ typechain
 
 #Hardhat files
 cache
-artifacts
+artifacts/*
+
+# Include ABIs
+!artifacts/contracts/
