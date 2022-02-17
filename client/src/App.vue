@@ -27,10 +27,11 @@ export default {
 <template>
 
     <div class="wrapper" v-if="!store.web3.hasWallet">
-      We called out looking for your Web3 wallet provider; but alas, we heard nothing.
+      I called out looking for your Web3 wallet provider; but alas, we heard nothing.
     </div>
     <div class="wrapper" v-else-if="!store.web3.isConnected">
-      You are connected to: {{ chainName }}.<br />
+      I see that you are connected to: {{ chainName }}.<br />
+      But I don't know who you are?<br />
       <button @click="connect()">Let's Connect</button>
     </div>
     <div class="wrapper" v-else>
