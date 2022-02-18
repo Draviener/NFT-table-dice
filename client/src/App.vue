@@ -30,10 +30,11 @@ export default {
     openMenu() {
       this.menu = !this.menu
     },
-    roll(diceId) {
-      let traits = web3dice.getTraits(diceId)
-      alert('traits: ' + JSON.stringify(traits))
-      let diceRoll = web3dice.roll(diceId)
+    async roll(diceId) {
+      //let traits = await web3dice.getTraits(diceId)
+      //console.log('traits: ', traits)
+      let diceRoll = await  web3dice.roll(diceId)
+      console.log('dice rolled: ', diceRoll)
       alert('dice rolled: ' + JSON.stringify(diceRoll))
     },
     switchNetwork() {

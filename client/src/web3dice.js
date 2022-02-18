@@ -6,7 +6,7 @@ export const web3dice = {
   provider: null,  
   signer: null,
   diceContract: null,
-  diceContractAddress: '0x06D6Ad006Fd7E8CDc3FBB9114E3CFA015b4Ff9e7', //what will be the best way to populate this?
+  diceContractAddress: '0x0a85f2835d2a81d066b3317146b7967f726e3091', //what will be the best way to populate this?
   async init() {
     try {
       this.provider = new ethers.providers.Web3Provider(window.ethereum,"any")
@@ -82,13 +82,13 @@ export const web3dice = {
     console.log('rolling')
     try {
       const roll = await this.diceContract.roll(diceId)
+      store.web3.lastRoll[diceId] = roll
+      console.log('roll', roll)
+      return roll
     } catch (err) {
       console.log("Error: ", err)
       return 'failed'
     }
-    store.web3.lastRoll[diceId] = roll
-    console.log('roll', roll)
-    return roll
   },
   async getTraits(diceId) {
     try {
@@ -97,7 +97,7 @@ export const web3dice = {
       console.log("Error: ", err)
       return 'failed'
     }
-    store.web3.traits[diceId] = traits
+    store.web3.diceTraits[diceId] = traits
     return traits
   }
 }
