@@ -32,8 +32,6 @@ export const web3dice = {
       console.log('block', blockNumber)
     })
 
-    store.chainId == this.provider.chainId
-
     //todo - if we were going multichain, we would need to get the correct
     //address for the contract based on which network is currently active
 
@@ -42,6 +40,9 @@ export const web3dice = {
 
 
     console.log ('Wallet provider found')
+    if (parseInt(store.web3.chain.chainId) == 4) { 
+      this.connect()
+    }
   },
   
   async connect() {
