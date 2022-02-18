@@ -31,6 +31,8 @@ export default {
       this.menu = !this.menu
     },
     roll(diceId) {
+      let traits = web3dice.getTraits(diceId)
+      alert('traits: ' + JSON.stringify(traits))
       let diceRoll = web3dice.roll(diceId)
       alert('dice rolled: ' + JSON.stringify(diceRoll))
     },

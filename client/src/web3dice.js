@@ -37,8 +37,6 @@ export const web3dice = {
 
     this.diceContract = new ethers.Contract(this.diceContractAddress, Dice.abi, this.provider)
 
-
-
     console.log ('Wallet provider found')
     if (parseInt(store.web3.chain.chainId) == 4) { 
       this.connect()
