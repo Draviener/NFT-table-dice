@@ -39,6 +39,8 @@ export const web3dice = {
 
     this.diceContract = new ethers.Contract(this.diceContractAddress, Dice.abi, this.provider)
 
+
+
     console.log ('Wallet provider found')
   },
   
@@ -59,10 +61,42 @@ export const web3dice = {
     
   },
 
+  async switchNetwork() {
+
+    const chainId = '0x4'
+    try {
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: chainId }]
+      });
+    } catch (error) {
+    }
+  },
+
   getBlock() {
     this.provider.getBlockNumber().then(block => {
       store.block = block
       console.log('block number is' + block)
     })
   },
+  async roll(diceId) {
+    console.log('rolling')
+    try {
+      const roll = await this.diceContract.roll(diceId)
+    } catch (err) {
+      console.log("Error: ", err)
+    }
+    store.web3.lastRoll[diceId] = roll
+    console.log('roll', roll)
+    return roll
+  },
+  async getTraits(diceId) {
+    try {
+      const traits = await this.diceContract.getTraits(diceId)
+    } catch (err) {
+      console.log("Error: ", err)
+    }
+    store.web3.traits[diceId] = traits
+    return traits
+  }
 }

@@ -6,6 +6,9 @@ export const store = reactive({
     isConnected: false,
     chain: null,
     accounts: null,
+    //todo: one array of dice objects with roll and trait properties
+    lastRoll: [],
+    diceTraits: []
   },
   address: '',
   block: 0
