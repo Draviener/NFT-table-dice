@@ -11,7 +11,8 @@ task("deploy-contract", "Deploy NFT contract").setAction(async (_, hre) => {
   const libraryDeployed = await LibraryPromise.then((contractFactory) => contractFactory.deploy());
 
   const factoryOptions = {
-    signer: getWallet(),
+    // TODO: read --networks parameter, also make lib/wallet.ts work
+    // signer: getWallet("rinkeby"),
     libraries: {
         "DiceLibrary": libraryDeployed.address,
     }
