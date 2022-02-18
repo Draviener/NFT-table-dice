@@ -1,9 +1,12 @@
 import { store } from './store.js'
 import { ethers } from "ethers"
+import Dice from '../../blockchain/artifacts/contracts/Dice.sol/TabletopDiceNFT.json'
 
 export const web3dice = {  
   provider: null,  
   signer: null,
+  diceContract: null,
+  diceContractAddress: '',
   async init() {
     try {
       this.provider = new ethers.providers.Web3Provider(window.ethereum,"any")
@@ -31,6 +34,11 @@ export const web3dice = {
 
     store.chainId == this.provider.chainId
 
+    //todo - if we were going multichain, we would need to get the correct
+    //address for the contract based on which network is currently active
+
+    this.diceContract = new ethers.Contract(this.diceContractAddress, Dice.abi, this.provider)
+
     console.log ('Wallet provider found')
   },
   
@@ -47,6 +55,8 @@ export const web3dice = {
       store.address = address
     })
     store.web3.isConnected = true
+
+    
   },
 
   getBlock() {
