@@ -5,8 +5,8 @@ export const store = reactive({
     hasWallet: false,
     isConnected: false,
     chain: null,
+    accounts: null,
   },
-  accounts: null,
   address: '',
   block: 0
 })
