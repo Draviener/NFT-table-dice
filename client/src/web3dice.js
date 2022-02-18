@@ -85,6 +85,7 @@ export const web3dice = {
       const roll = await this.diceContract.roll(diceId)
     } catch (err) {
       console.log("Error: ", err)
+      return 'failed'
     }
     store.web3.lastRoll[diceId] = roll
     console.log('roll', roll)
@@ -95,6 +96,7 @@ export const web3dice = {
       const traits = await this.diceContract.getTraits(diceId)
     } catch (err) {
       console.log("Error: ", err)
+      return 'failed'
     }
     store.web3.traits[diceId] = traits
     return traits
