@@ -20,6 +20,19 @@ const config: HardhatUserConfig = {
       accounts:
         process.env.RINKEBY_GETH_PRIVATE_KEY !== undefined ? [process.env.RINKEBY_GETH_PRIVATE_KEY] : [],
     },
+    mumbai: {
+      chainId: 80001,
+      url: process.env.MUMBAI_RPC_URI,
+      accounts:
+        process.env.MUMBAI_PRIVATE_KEY !== undefined ? [process.env.MUMBAI_PRIVATE_KEY] : [],
+    },
+    polygon: {
+      chainId: 137,
+      url: process.env.POLYGON_RPC_URI,
+      accounts: 
+        process.env.POLYGON_PRIVATE_KEY !== undefined ? [process.env.POLYGON_PRIVATE_KEY] : [],
+        
+    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
