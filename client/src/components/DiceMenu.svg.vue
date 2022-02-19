@@ -33,6 +33,11 @@ export default {
       this.$emit('close')
     },
     add(id) {
+      for(let i=0;i<3;i++) {
+        if (store.selectedDice[i] == store.ownedDice[this.ownedDiceIndex]) {
+          store.selectedDice[i] = null
+        }
+      }
       store.selectedDice[id] = store.ownedDice[this.ownedDiceIndex]
     },
     remove(id) {

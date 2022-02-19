@@ -25,13 +25,13 @@ export default {
   watch: {
     rolling(value, oldValue) {
       if (value) {
-        this.tick()
+        this.showRandomNumber()
       }
     }
   },
   methods: {
-    tick () {
-      this.rollingNumber = ((this.rollingNumber + 1) % this.sides) + 1
+    showRandomNumber () {
+      this.rollingNumber = ((this.rollingNumber) % this.sides) + 1
       if (this.rolling) {
         setTimeout(this.tick, 100)
       }
