@@ -11,5 +11,25 @@ export const store = reactive({
   address: '',
   block: 0,
   lastRoll: [],
-  diceTraits: []
+  diceTraits: [],
+  isRolling: [],
+  ownedDice: [
+  ],
+  selectedDice: [
+    null,
+    null,
+    null
+  ],
+  diceSelected() {
+    if(this.selectedDice[0] != null) {
+      return true
+    }
+    if(this.selectedDice[1] != null) {
+      return true
+    }
+    if(this.selectedDice[2] != null) {
+      return true
+    }
+    false
+  }
 })

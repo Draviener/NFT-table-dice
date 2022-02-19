@@ -3,11 +3,13 @@ import SvgContainer from './components/layouts/SvgContainer.vue'
 import MenuIcon from './components/_menu-icon.svg.vue'
 import Die from './components/_die.svg.vue'
 import DiceMenu from './components/DiceMenu.svg.vue'
+import { web3dice } from './web3dice.js'
+
+web3dice.getOwnedDice()
 </script>
 
 <script>
 import { store } from './store.js'
-import { web3dice } from './web3dice.js'
 
 export default {
   data() {
@@ -29,14 +31,27 @@ export default {
       web3dice.connect()
     },
     openMenu() {
-      this.menu = !this.menu
+      this.menu = true
     },
-    async roll(diceId) {
-      //let traits = await web3dice.getTraits(diceId)
-      //console.log('traits: ', traits)
-      let diceRoll = await  web3dice.roll(diceId)
-      console.log('dice rolled: ', diceRoll)
-      alert('dice rolled: ' + JSON.stringify(diceRoll))
+    closeMenu() {
+      this.menu = false
+    },
+    async roll() {
+      if (!store.diceSelected()) {
+        this.menu = true
+      } else {
+        //let traits = await web3dice.getTraits(diceId)
+        //console.log('traits: ', traits)
+        if (store.selectedDice[0] != null) {
+          await  web3dice.delayedRoll(store.selectedDice[0])
+        }
+        if (store.selectedDice[1] != null) {
+          await  web3dice.delayedRoll(store.selectedDice[1])
+        }
+        if (store.selectedDice[2] != null) {
+          await  web3dice.delayedRoll(store.selectedDice[2])
+        }
+      }
     },
     switchNetwork() {
       web3dice.switchNetwork()
@@ -79,22 +94,30 @@ export default {
           <g :transform="'translate(' + 300 + ' ' + -430 +')'">
             <menu-icon @click="openMenu()" />
           </g>
-          <rect x="-140" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
-          <rect x="-40" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
-          <rect x="60" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
-          <rect x="-150" y="190" width="300" height="100" fill="#000000" fill-opacity="0" stroke-width="0" class="can-click" @click="roll(1)" />
 
           <dice-menu :show="menu" />    
 
-          <die 
-            :font="1"
-            :background="1"
-            :value="store.lastRoll[1]"
-            :color="1"
-            :rolling="false"
-          />
-
-          <dice-menu :show="menu" />        
+          <g transform="translate(0 150)">
+            <die 
+              v-if="store.selectedDice[0] != null"
+              transform="translate(-140 -10)"
+              :diceid="store.selectedDice[0]"
+            />
+            <die 
+              v-if="store.selectedDice[1] != null"
+              transform="translate(0 10)"
+              :diceid="store.selectedDice[1]"
+            />
+            <die 
+              v-if="store.selectedDice[2] != null"
+              transform="translate(140 -10)"
+              :diceid="store.selectedDice[2]"
+            />
+            <text v-if="!store.diceSelected()">Select Your Dice</text>
+            <rect x="-300" y="-100" width="600" height="200" fill="#000000" stroke="#ffffff" fill-opacity="0" stroke-width="0" class="can-click" @click="roll()" />
+          </g>
+          <rect v-if="menu" x="-2000" y="-2000" width="4000" height="4000" fill="#000000" opacity="0.4" @click="closeMenu" />
+          <dice-menu :show="menu" @close="closeMenu()" />        
         </g>
       </g>
     </svg-container>
