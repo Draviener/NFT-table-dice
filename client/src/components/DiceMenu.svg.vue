@@ -117,7 +117,6 @@ export default {
         </g>
       </g>
 
-
       <g transform="translate(0 10)">
         <die 
           transform="translate(0 90) scale(1.1)"
@@ -141,8 +140,6 @@ export default {
     <g transform="translate(0 -150)" v-else>
     <text>You have no dice.</text>
     </g>
-
-
 
     <g transform="translate(0 50)" v-if="haveDice">
 
