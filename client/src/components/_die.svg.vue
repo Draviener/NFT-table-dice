@@ -1,7 +1,11 @@
+<script setup>
+import DtenGenericBackground from './_dice-parts/dten-generic-background.svg.vue'
+import DtenGenericThree from './_dice-parts/dten-generic-three.svg.vue'
+</script>
 <script>
 export default {
   props: {
-    isRolling: {
+    rolling: {
       type: Boolean,
       default: false
     },
@@ -9,11 +13,15 @@ export default {
       type: Number,
       default: 1
     },
-    type: {
+    background: {
+      type: String,
+      default: 10
+    },
+    font: {
       type: Number,
       default: 1
     },
-    colorTheme: {
+    color: {
       type: Number,
       default: 1
     }
@@ -29,7 +37,18 @@ export default {
 
 <template>
   <g fill="#ffffff" stroke="#ffffff">
-    <text>{{ value }}</text>
+    <g v-if="font==1">
+      <dten-generic-three v-if="value==1" />
+      <dten-generic-three v-if="value==2" />
+      <dten-generic-three v-if="value==3" />
+      <dten-generic-three v-if="value==4" />
+      <dten-generic-three v-if="value==5" />
+      <dten-generic-three v-if="value==6" />
+      <dten-generic-three v-if="value==7" />
+      <dten-generic-three v-if="value==8" />
+      <dten-generic-three v-if="value==9" />
+      <dten-generic-three v-if="value==10" />
+    </g>
   </g>
 </template>
 

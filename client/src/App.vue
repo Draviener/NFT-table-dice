@@ -67,7 +67,13 @@ export default {
           <rect x="60" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
           <rect x="-150" y="190" width="300" height="100" fill="#000000" fill-opacity="0" stroke-width="0" class="can-click" @click="roll" />
 
-          <die />
+          <die 
+            :font="1"
+            :background="1"
+            :value="1"
+            :color="1"
+            :rolling="false"
+          />
 
           <dice-menu :show="menu" />        
         </g>
