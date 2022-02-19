@@ -82,7 +82,7 @@ export const web3dice = {
     console.log('rolling')
     try {
       const roll = await this.diceContract.roll(diceId)
-      store.web3.lastRoll[diceId] = roll
+      store.lastRoll[diceId] = roll
       console.log('roll', roll)
       return roll
     } catch (err) {
@@ -97,7 +97,7 @@ export const web3dice = {
       console.log("Error: ", err)
       return 'failed'
     }
-    store.web3.diceTraits[diceId] = traits
+    store.diceTraits[diceId] = traits
     return traits
   }
 }

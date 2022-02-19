@@ -1,6 +1,7 @@
 <script setup>
 import SvgContainer from './components/layouts/SvgContainer.vue'
 import MenuIcon from './components/_menu-icon.svg.vue'
+import Die from './components/_die.svg.vue'
 import DiceMenu from './components/DiceMenu.svg.vue'
 </script>
 
@@ -85,6 +86,15 @@ export default {
 
           <dice-menu :show="menu" />    
 
+          <die 
+            :font="1"
+            :background="1"
+            :value="store.lastRoll[1]"
+            :color="1"
+            :rolling="false"
+          />
+
+          <dice-menu :show="menu" />        
         </g>
       </g>
     </svg-container>

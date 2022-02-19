@@ -7,9 +7,9 @@ export const store = reactive({
     chain: null,
     accounts: null,
     //todo: one array of dice objects with roll and trait properties
-    lastRoll: [],
-    diceTraits: []
   },
   address: '',
-  block: 0
+  block: 0,
+  lastRoll: [],
+  diceTraits: []
 })
