@@ -1,9 +1,12 @@
 import { store } from './store.js'
 import { ethers } from "ethers"
+import Dice from '../../blockchain/artifacts/contracts/Dice.sol/TabletopDiceNFT.json'
 
 export const web3dice = {  
   provider: null,  
   signer: null,
+  diceContract: null,
+  diceContractAddress: '0x0a85f2835d2a81d066b3317146b7967f726e3091', //what will be the best way to populate this?
   async init() {
     try {
       this.provider = new ethers.providers.Web3Provider(window.ethereum,"any")
@@ -29,9 +32,15 @@ export const web3dice = {
       console.log('block', blockNumber)
     })
 
-    store.chainId == this.provider.chainId
+    //todo - if we were going multichain, we would need to get the correct
+    //address for the contract based on which network is currently active
+
+    this.diceContract = new ethers.Contract(this.diceContractAddress, Dice.abi, this.provider)
 
     console.log ('Wallet provider found')
+    if (parseInt(store.web3.chain.chainId) == 4) { 
+      this.connect()
+    }
   },
   
   async connect() {
@@ -47,6 +56,20 @@ export const web3dice = {
       store.address = address
     })
     store.web3.isConnected = true
+
+    
+  },
+
+  async switchNetwork() {
+
+    const chainId = '0x4'
+    try {
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: chainId }]
+      });
+    } catch (error) {
+    }
   },
 
   getBlock() {
@@ -55,4 +78,26 @@ export const web3dice = {
       console.log('block number is' + block)
     })
   },
+  async roll(diceId) {
+    console.log('rolling')
+    try {
+      const roll = await this.diceContract.roll(diceId)
+      store.web3.lastRoll[diceId] = roll
+      console.log('roll', roll)
+      return roll
+    } catch (err) {
+      console.log("Error: ", err)
+      return 'failed'
+    }
+  },
+  async getTraits(diceId) {
+    try {
+      const traits = await this.diceContract.getTraits(diceId)
+    } catch (err) {
+      console.log("Error: ", err)
+      return 'failed'
+    }
+    store.web3.diceTraits[diceId] = traits
+    return traits
+  }
 }
