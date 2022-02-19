@@ -1,6 +1,25 @@
 <script setup>
 import DtenGenericBackground from './_dice-parts/dten-generic-background.svg.vue'
+import DtenGenericOne from './_dice-parts/dten-generic-one.svg.vue'
+import DtenGenericTwo from './_dice-parts/dten-generic-two.svg.vue'
 import DtenGenericThree from './_dice-parts/dten-generic-three.svg.vue'
+import DtenGenericFour from './_dice-parts/dten-generic-four.svg.vue'
+import DtenGenericFive from './_dice-parts/dten-generic-five.svg.vue'
+import DtenGenericSix from './_dice-parts/dten-generic-six.svg.vue'
+import DtenGenericSeven from './_dice-parts/dten-generic-seven.svg.vue'
+import DtenGenericEight from './_dice-parts/dten-generic-eight.svg.vue'
+import DtenGenericNine from './_dice-parts/dten-generic-nine.svg.vue'
+import DtenGenericTen from './_dice-parts/dten-generic-ten.svg.vue'
+import DtenGenericEleven from './_dice-parts/dten-generic-eleven.svg.vue'
+import DtenGenericTwelve from './_dice-parts/dten-generic-twelve.svg.vue'
+import DtenGenericThirteen from './_dice-parts/dten-generic-thirteen.svg.vue'
+import DtenGenericFourteen from './_dice-parts/dten-generic-fourteen.svg.vue'
+import DtenGenericFifteen from './_dice-parts/dten-generic-fifteen.svg.vue'
+import DtenGenericSixteen from './_dice-parts/dten-generic-sixteen.svg.vue'
+import DtenGenericSeventeen from './_dice-parts/dten-generic-seventeen.svg.vue'
+import DtenGenericEighteen from './_dice-parts/dten-generic-eighteen.svg.vue'
+import DtenGenericNineteen from './_dice-parts/dten-generic-nineteen.svg.vue'
+import DtenGenericTwenty from './_dice-parts/dten-generic-twenty.svg.vue'
 </script>
 <script>
 export default {
@@ -14,8 +33,8 @@ export default {
       default: 1
     },
     background: {
-      type: String,
-      default: 10
+      type: Number,
+      default: 1
     },
     font: {
       type: Number,
@@ -37,6 +56,9 @@ export default {
 
 <template>
   <g fill="#ffffff" stroke="#ffffff">
+    <dten-generic-background v-if="background==1" />
+    <dten-generic-background v-if="background==2" />
+    <dten-generic-background v-if="background==3" />
     <g v-if="font==1">
       <dten-generic-three v-if="value==1" />
       <dten-generic-three v-if="value==2" />

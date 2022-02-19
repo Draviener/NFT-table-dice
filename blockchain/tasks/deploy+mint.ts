@@ -3,7 +3,6 @@ import { Contract } from "ethers";
 import { TransactionResponse } from "@ethersproject/abstract-provider";
 import { env } from "../lib/env";
 import { getContract } from "../lib/contract";
-import { getWallet } from "../lib/wallet";
 
 task("deploy-contract", "Deploy NFT contract").setAction(async (_, hre) => {
   // First deploy the Library, since an address is required

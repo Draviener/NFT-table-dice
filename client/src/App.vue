@@ -20,7 +20,7 @@ export default {
     chainName() {
       if ( store.web3.chain != null) {
         return store.web3.chain.name
-      }
+      }      
       return 'no chain found'
     }
   },
@@ -31,8 +31,15 @@ export default {
     openMenu() {
       this.menu = !this.menu
     },
-    roll() {
-      alert('you rolled the dice')
+    async roll(diceId) {
+      //let traits = await web3dice.getTraits(diceId)
+      //console.log('traits: ', traits)
+      let diceRoll = await  web3dice.roll(diceId)
+      console.log('dice rolled: ', diceRoll)
+      alert('dice rolled: ' + JSON.stringify(diceRoll))
+    },
+    switchNetwork() {
+      web3dice.switchNetwork()
     }
   }
 }
@@ -50,11 +57,21 @@ export default {
 
         <g v-else-if="!store.web3.isConnected">
           <text transform="translate(0 -50)">You are on the {{ chainName }} network.</text>
-          <text>Lets connect your account.</text>
-          <g transform="translate(0 70)">
-            <rect x="-120" y="-30" width="240" height="60" fill="#222222" rx="15" ry="15" />
-            <text>Connect It</text>
-            <rect x="-120" y="-30" width="240" height="60" fill="#000000" fill-opacity="0" @click="connect()" class="can-click" />
+          <g v-if="chainName != 'rinkeby'">
+            <text>Please switch to rinkeby</text>
+            <g transform="translate(0 70)">
+              <rect x="-120" y="-30" width="240" height="60" fill="#222222" rx="15" ry="15" />
+              <text>Switch Networks</text>
+              <rect x="-120" y="-30" width="240" height="60" fill="#000000" fill-opacity="0" @click="switchNetwork()" class="can-click" />
+            </g>
+          </g>
+          <g v-else>
+            <text>Let's connect your account!</text>
+            <g transform="translate(0 70)">
+              <rect x="-120" y="-30" width="240" height="60" fill="#222222" rx="15" ry="15" />
+              <text>Connect It</text>
+              <rect x="-120" y="-30" width="240" height="60" fill="#000000" fill-opacity="0" @click="connect()" class="can-click" />
+            </g>
           </g>
         </g>
 
@@ -65,12 +82,14 @@ export default {
           <rect x="-140" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
           <rect x="-40" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
           <rect x="60" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
-          <rect x="-150" y="190" width="300" height="100" fill="#000000" fill-opacity="0" stroke-width="0" class="can-click" @click="roll" />
+          <rect x="-150" y="190" width="300" height="100" fill="#000000" fill-opacity="0" stroke-width="0" class="can-click" @click="roll(1)" />
+
+          <dice-menu :show="menu" />    
 
           <die 
             :font="1"
             :background="1"
-            :value="1"
+            :value="store.lastRoll[1]"
             :color="1"
             :rolling="false"
           />
