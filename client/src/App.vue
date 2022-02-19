@@ -1,6 +1,7 @@
 <script setup>
 import SvgContainer from './components/layouts/SvgContainer.vue'
 import MenuIcon from './components/_menu-icon.svg.vue'
+import Die from './components/_die.svg.vue'
 import DiceMenu from './components/DiceMenu.svg.vue'
 </script>
 
@@ -65,6 +66,8 @@ export default {
           <rect x="-40" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
           <rect x="60" y="200" width="80" height="80" stroke="#ffffff" fill="#000000" fill-opacity="0.1" stroke-width="1" rx="5" ry="5" />
           <rect x="-150" y="190" width="300" height="100" fill="#000000" fill-opacity="0" stroke-width="0" class="can-click" @click="roll" />
+
+          <die />
 
           <dice-menu :show="menu" />        
         </g>
