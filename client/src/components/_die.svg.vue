@@ -1,78 +1,101 @@
 <script setup>
 import DtenGenericBackground from './_dice-parts/dten-generic-background.svg.vue'
-import DtenGenericOne from './_dice-parts/dten-generic-one.svg.vue'
-import DtenGenericTwo from './_dice-parts/dten-generic-two.svg.vue'
-import DtenGenericThree from './_dice-parts/dten-generic-three.svg.vue'
-import DtenGenericFour from './_dice-parts/dten-generic-four.svg.vue'
-import DtenGenericFive from './_dice-parts/dten-generic-five.svg.vue'
-import DtenGenericSix from './_dice-parts/dten-generic-six.svg.vue'
-import DtenGenericSeven from './_dice-parts/dten-generic-seven.svg.vue'
-import DtenGenericEight from './_dice-parts/dten-generic-eight.svg.vue'
-import DtenGenericNine from './_dice-parts/dten-generic-nine.svg.vue'
-import DtenGenericTen from './_dice-parts/dten-generic-ten.svg.vue'
-import DtenGenericEleven from './_dice-parts/dten-generic-eleven.svg.vue'
-import DtenGenericTwelve from './_dice-parts/dten-generic-twelve.svg.vue'
-import DtenGenericThirteen from './_dice-parts/dten-generic-thirteen.svg.vue'
-import DtenGenericFourteen from './_dice-parts/dten-generic-fourteen.svg.vue'
-import DtenGenericFifteen from './_dice-parts/dten-generic-fifteen.svg.vue'
-import DtenGenericSixteen from './_dice-parts/dten-generic-sixteen.svg.vue'
-import DtenGenericSeventeen from './_dice-parts/dten-generic-seventeen.svg.vue'
-import DtenGenericEighteen from './_dice-parts/dten-generic-eighteen.svg.vue'
-import DtenGenericNineteen from './_dice-parts/dten-generic-nineteen.svg.vue'
-import DtenGenericTwenty from './_dice-parts/dten-generic-twenty.svg.vue'
+import DtenGenericNumbers from './_dice-parts/dten-generic-numbers.svg.vue'
 </script>
 <script>
+import { onMounted } from 'vue'
+import { store } from '../store.js'
+
 export default {
   props: {
-    rolling: {
-      type: Boolean,
-      default: false
-    },
-    value: {
+    diceid: {
       type: Number,
       default: 1
     },
-    background: {
-      type: Number,
-      default: 1
-    },
-    font: {
-      type: Number,
-      default: 1
-    },
-    color: {
-      type: Number,
-      default: 1
-    }
+  },
+  setup () {
+    this.tick()
   },
   data () {
     return {
+      rollingNumber: 1
     }
   },
+  watch: {
+    rolling(value, oldValue) {
+      if (value) {
+        this.tick()
+      }
+    }
+  },
+  methods: {
+    tick () {
+      this.rollingNumber = ((this.rollingNumber + 1) % this.sides) + 1
+      if (this.rolling) {
+        setTimeout(this.tick, 100)
+      }
+    },
+    displayValue () {
+      if (this.rolling) {
+        return this.rollingNumber
+      }
+      return this.value
+    },
+  },
   computed: {
+    rolling () {
+      return store.isRolling[this.diceid]      
+    },
+    value () {
+      if (store.lastRoll[this.diceid]) {
+        return parseInt(store.lastRoll[this.diceid])
+      }
+      return 1     
+    },
+    background () {
+      return 1
+    },
+    font () {
+      return 1
+    },
+    color () {
+      return 1
+    },
+
   }
 }
 </script>
 
 <template>
-  <g fill="#ffffff" stroke="#ffffff">
-    <dten-generic-background v-if="background==1" />
-    <dten-generic-background v-if="background==2" />
-    <dten-generic-background v-if="background==3" />
-    <g v-if="font==1">
-      <dten-generic-three v-if="value==1" />
-      <dten-generic-three v-if="value==2" />
-      <dten-generic-three v-if="value==3" />
-      <dten-generic-three v-if="value==4" />
-      <dten-generic-three v-if="value==5" />
-      <dten-generic-three v-if="value==6" />
-      <dten-generic-three v-if="value==7" />
-      <dten-generic-three v-if="value==8" />
-      <dten-generic-three v-if="value==9" />
-      <dten-generic-three v-if="value==10" />
+  <g>
+    <ellipse cx="0" cy="60" rx="60" ry="10" fill="#000000" opacity="0.25" />
+    <g class="dice" :class="{rolling: rolling}">
+      <g fill="#ffffff" stroke="#ffffff">
+      <animateTransform v-if="this.rolling" attributeName="transform"
+                        attributeType="XML"
+                        type="rotate"
+                        from="0"
+                        to="360"
+                        dur="0.75s"
+                        animate="freeze"
+                        repeatCount="indefinite"/>
+        <dten-generic-background v-if="background==1" />
+        <dten-generic-background v-if="background==2" />
+        <dten-generic-background v-if="background==3" />
+        <g v-if="font==1">
+          <dten-generic-numbers :value="displayValue()" />
+        </g>
+      </g>
     </g>
   </g>
 </template>
 
 <style>
+.dice {
+  transition: 0.5s ease-out; 
+}
+.rolling {
+  transition: 2s linear;
+  transform: translate(0,-100px) scale(0.75);
+}
 </style>

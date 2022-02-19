@@ -1,0 +1,724 @@
+<script>
+export default {
+}
+</script>
+
+<template>
+<g transform="translate(0 -0) scale(1)">
+
+  <g
+     aria-label="2"
+     id="text45038"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#000000;stroke-width:0.884038"
+     transform="translate(-203.83906,1.1526554)" />
+  <g
+     aria-label="4"
+     id="text45042"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="6"
+     transform="rotate(121.47063)"
+     id="text45046"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="13"
+     transform="rotate(-123.99761)"
+     id="text45050"
+     style="font-size:28.7168px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.788149" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text45054"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text45058"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text45062"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text45066"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text45070"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="4"
+     id="text1362"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="6"
+     id="text1366"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="16"
+     transform="rotate(113.8239)"
+     id="text1370"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="9"
+     transform="rotate(-123.99761)"
+     id="text1374"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text1378"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text1382"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text1386"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text1390"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text1394"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="1"
+     id="text14712"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.884038" />
+  <g
+     aria-label="8"
+     id="text14716"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="14"
+     transform="rotate(121.47063)"
+     id="text14720"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="7"
+     transform="rotate(-123.99761)"
+     id="text14724"
+     style="font-size:28.7168px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.788149" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text14728"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text14732"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text14736"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text14740"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text14744"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="3"
+     id="text26885"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.884038" />
+  <g
+     aria-label="19"
+     id="text26889"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="5"
+     transform="rotate(113.8239)"
+     id="text26893"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="11"
+     transform="rotate(-123.99761)"
+     id="text26897"
+     style="font-size:28.7168px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.788149" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text26901"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text26905"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text26909"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text26913"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text26917"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="5"
+     id="text966"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="2"
+     id="text970"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="11"
+     transform="rotate(113.8239)"
+     id="text974"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="3"
+     transform="rotate(-123.99761)"
+     id="text978"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text982"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text986"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text990"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text994"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text998"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="6"
+     id="text1022"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="11"
+     id="text1026"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="13"
+     transform="rotate(113.8239)"
+     id="text1030"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="4"
+     transform="rotate(-123.99761)"
+     id="text1034"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text1038"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text1042"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text1046"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text1050"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text1054"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="7"
+     id="text1078"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="13"
+     id="text1082"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="4"
+     transform="rotate(113.8239)"
+     id="text1086"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="12"
+     transform="rotate(-123.99761)"
+     id="text1090"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text1094"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text1098"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text1102"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text1106"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text1110"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="8"
+     id="text1134"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="17"
+     id="text1138"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="9"
+     transform="rotate(113.8239)"
+     id="text1142"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="19"
+     transform="rotate(-123.99761)"
+     id="text1146"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text1150"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text1154"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text1158"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text1162"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text1166"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="9"
+     id="text1190"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="5"
+     id="text1194"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="18"
+     transform="rotate(113.8239)"
+     id="text1198"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="6"
+     transform="rotate(-123.99761)"
+     id="text1202"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text1206"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text1210"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text1214"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text1218"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text1222"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="10"
+     id="text1246"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="3"
+     id="text1250"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="14"
+     transform="rotate(113.8239)"
+     id="text1254"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="1"
+     transform="rotate(-123.99761)"
+     id="text1258"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text1262"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text1266"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text1270"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text1274"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text1278"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="2"
+     id="g8088"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#000000;stroke-width:0.884038"
+     transform="translate(-201.71393,288.8246)" />
+  <g
+     aria-label="4"
+     id="text8092"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="6"
+     transform="rotate(121.47063)"
+     id="text8096"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="13"
+     transform="rotate(-123.99761)"
+     id="text8100"
+     style="font-size:28.7168px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.788149" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text8104"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text8108"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text8112"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text8116"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text8120"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="1"
+     transform="matrix(0.9742179,-0.22560913,-0.22560913,-0.9742179,0,0)"
+     id="text8124"
+     style="font-size:25.4637px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.604132" />
+  <g
+     aria-label="14"
+     id="text8142"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="6"
+     id="text8146"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="16"
+     transform="rotate(113.8239)"
+     id="text8150"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="9"
+     transform="rotate(-123.99761)"
+     id="text8154"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text8158"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text8162"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text8166"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text8170"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text8174"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="11"
+     id="text8196"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.884038" />
+  <g
+     aria-label="8"
+     id="text8200"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="14"
+     transform="rotate(121.47063)"
+     id="text8204"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="7"
+     transform="rotate(-123.99761)"
+     id="text8208"
+     style="font-size:28.7168px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.788149" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text8212"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text8216"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text8220"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text8224"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text8228"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="13"
+     id="text8250"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.884038" />
+  <g
+     aria-label="19"
+     id="text8254"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="5"
+     transform="rotate(113.8239)"
+     id="text8258"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="11"
+     transform="rotate(-123.99761)"
+     id="text8262"
+     style="font-size:28.7168px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.788149" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text8266"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text8270"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text8274"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text8278"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text8282"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="15"
+     id="text8304"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="2"
+     id="text8308"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="11"
+     transform="rotate(113.8239)"
+     id="text8312"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="3"
+     transform="rotate(-123.99761)"
+     id="text8316"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text8320"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text8324"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text8328"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text8332"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text8336"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="16"
+     id="text8358"
+     style="font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.84661" />
+  <g
+     aria-label="11"
+     id="text8362"
+     style="font-size:25.3858px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.642556" />
+  <g
+     aria-label="13"
+     transform="rotate(113.8239)"
+     id="text8366"
+     style="font-size:29.0445px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.797143" />
+  <g
+     aria-label="4"
+     transform="rotate(-123.99761)"
+     id="text8370"
+     style="font-size:25.516px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.700302" />
+  <g
+     aria-label="1"
+     transform="rotate(59.654953)"
+     id="text8374"
+     style="font-size:24.4133px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.579213" />
+  <g
+     aria-label="1"
+     transform="matrix(-0.50520629,0.86299861,0.86299861,0.50520629,0,0)"
+     id="text8378"
+     style="font-size:32.2106px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.764205" />
+  <g
+     aria-label="1"
+     transform="matrix(0.57132108,0.82072664,0.82072664,-0.57132108,0,0)"
+     id="text8382"
+     style="font-size:28.597px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.678471" />
+  <g
+     aria-label="1"
+     transform="rotate(113.37522)"
+     id="text8386"
+     style="font-size:27.7544px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.658478" />
+  <g
+     aria-label="1"
+     transform="rotate(-166.9613)"
+     id="text8390"
+     style="font-size:27.1696px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.644607" />
+  <g
+     aria-label="1"
+     transform="matrix(0.9742179,-0.22560913,-0.22560913,-0.9742179,-552.72302,-455.1174)"
+     id="text8394"
+     style="font-size:25.4637px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';fill:#ffffff;stroke-width:0.604132">
+    <path
+       id="path50847"
+       d="m 486.61463,-565.84442 q 0,0.12732 0,0.45835 0,0.30556 0,0.66205 0.0255,0.3565 0.0255,0.68752 0.0255,0.30557 0.0255,0.43289 0.0255,0.30556 0.10186,0.94215 0.0764,0.61113 0.17824,1.27319 0.12732,0.63659 0.25464,1.19679 0.15278,0.53474 0.2801,0.66206 v -0.20371 q 0,-0.35649 -0.0509,-0.68752 -0.0509,-0.35649 -0.0509,-0.73845 0,-2.16441 0.25464,-4.25244 0.25464,-2.11348 0.25464,-4.2779 0,-0.5602 -0.0255,-1.29865 0,-0.73844 -0.0509,-1.52782 -0.0255,-0.78937 -0.0764,-1.55328 -0.0509,-0.76391 -0.15279,-1.34958 -0.0255,-0.15278 -0.0764,-0.38195 -0.0255,-0.25464 -0.0764,-0.48381 -0.0509,-0.22918 -0.10185,-0.38196 -0.0509,-0.17825 -0.0509,-0.17825 l -0.10185,-0.10185 q -0.0764,-0.0764 -0.40742,-0.0255 -0.30557,0.0255 -0.66206,0.12731 -0.33103,0.10186 -0.61113,0.25464 -0.2801,0.12732 -0.30556,0.22917 -0.10186,0.61113 -0.2801,0.99309 -0.17825,0.35649 -0.45835,0.63659 -0.2801,0.25464 -0.68752,0.50927 -0.40742,0.25464 -0.94216,0.58567 0.0509,0.12732 -0.10185,0.22917 -0.15278,0.10186 -0.35649,0.20371 -0.17825,0.0764 -0.3565,0.17825 -0.15278,0.10185 -0.15278,0.20371 0,0.0255 0,0.0764 0.0255,0.0509 0.0255,0.0764 0.0509,-0.0255 0.15278,-0.0509 0.10185,-0.0255 0.15278,-0.0509 0.15278,-0.0509 0.63659,-0.33103 0.50928,-0.2801 1.04401,-0.58567 0.53474,-0.30556 0.94216,-0.5602 0.43288,-0.25464 0.43288,-0.25464 0.10186,0.0255 0.25464,0.71299 0.15278,0.66205 0.30557,1.47689 0.17824,0.81484 0.30556,1.55329 0.12732,0.71298 0.15278,0.8403 0.0509,0.22917 0.17825,0.45835 0.15278,0.22917 0.15278,0.45834 v 2.85194 z m -95.08035,21.87804 q 0.0597,0.12203 0.21498,0.43927 0.14333,0.29285 0.31053,0.6345 0.14277,0.3536 0.29804,0.67086 0.11889,0.30479 0.1786,0.42681 0.1189,0.30481 0.3443,0.95072 0.21344,0.62151 0.42634,1.30379 0.17656,0.66981 0.3173,1.26641 0.10438,0.58414 0.0421,0.76587 l -0.0955,-0.19523 q -0.16721,-0.34165 -0.2737,-0.68277 -0.11843,-0.36552 -0.29758,-0.73158 -1.01519,-2.07432 -2.23858,-3.95599 -1.23534,-1.90608 -2.25053,-3.9804 -0.26275,-0.53688 -0.58468,-1.25654 -0.34635,-0.70771 -0.66783,-1.4881 -0.3458,-0.76847 -0.65533,-1.52445 -0.30953,-0.75599 -0.48658,-1.36507 -0.0472,-0.15838 -0.10595,-0.40188 -0.095,-0.25599 -0.15372,-0.4995 -0.0587,-0.2435 -0.0815,-0.41382 -0.0348,-0.1947 -0.0348,-0.1947 l 0.0498,-0.14539 q 0.0374,-0.10903 0.37851,-0.21553 0.3048,-0.11888 0.69422,-0.1885 0.36502,-0.0576 0.70512,-0.0426 0.32815,-0.009 0.40033,0.0763 0.38426,0.53791 0.73424,0.82037 0.33802,0.25805 0.73785,0.39512 0.38787,0.11265 0.89777,0.1656 0.50989,0.053 1.17763,0.11938 0.0109,0.14589 0.20511,0.17187 0.1942,0.026 0.4372,0.028 0.20664,-0.0104 0.42525,0.004 0.1942,0.026 0.24197,0.12358 0.012,0.0244 0.0358,0.0732 -5.6e-4,0.0607 0.0114,0.0852 -0.0607,-5.6e-4 -0.1703,0.0229 -0.10957,0.0233 -0.17029,0.0229 -0.17029,0.0229 -0.76536,-0.0187 -0.61945,-0.0296 -1.27525,-0.0716 -0.6558,-0.042 -1.1657,-0.095 -0.53429,-0.041 -0.53429,-0.041 -0.0857,0.0722 0.0904,0.80273 0.1641,0.70616 0.39986,1.55875 0.21136,0.86452 0.43571,1.63195 0.21239,0.74301 0.2477,0.87698 0.0587,0.2435 0.0442,0.52287 -0.0389,0.29129 0.0686,0.51093 l 1.33765,2.73322 z m 13.78898,-62.7798 q -0.11168,0.0824 -0.40204,0.29656 -0.26802,0.1977 -0.58071,0.42835 -0.32914,0.20837 -0.6195,0.42255 -0.28453,0.17533 -0.39621,0.25771 -0.28446,0.17541 -0.8923,0.52026 -0.58549,0.32837 -1.2321,0.66742 -0.64076,0.3002 -1.21451,0.55098 -0.5679,0.21198 -0.76195,0.18268 l 0.17868,-0.13181 q 0.3127,-0.23065 0.636,-0.40017 0.34564,-0.18599 0.68067,-0.43312 1.89851,-1.40042 3.56525,-2.97475 1.68907,-1.59081 3.58758,-2.99123 0.49138,-0.36245 1.1556,-0.81787 0.64773,-0.47779 1.37307,-0.94386 0.70884,-0.48845 1.4119,-0.93796 0.70301,-0.44961 1.28264,-0.73919 0.15045,-0.0766 0.38447,-0.18009 0.2398,-0.14247 0.47382,-0.246 0.23397,-0.10362 0.40093,-0.15779 0.18929,-0.0707 0.18929,-0.0707 l 0.15525,0.0234 q 0.11648,0.0176 0.28598,0.34086 0.17533,0.28453 0.31667,0.6631 0.12485,0.35626 0.17207,0.7008 0.0695,0.32807 -0.003,0.41631 -0.47015,0.48475 -0.68984,0.88823 -0.19737,0.387 -0.26183,0.81392 -0.0421,0.41045 -0.002,0.93256 0.0403,0.52212 0.0959,1.20534 -0.14462,0.0377 -0.13511,0.23762 0.01,0.19991 0.052,0.4445 0.0483,0.2058 0.0743,0.42802 0.01,0.19992 -0.0798,0.26582 -0.0224,0.0165 -0.067,0.0494 -0.0612,0.0106 -0.0835,0.0271 -0.0106,-0.0612 -0.0542,-0.16695 -0.0435,-0.10585 -0.0542,-0.16696 -0.0542,-0.16696 -0.12152,-0.77257 -0.0838,-0.62793 -0.16178,-1.29468 -0.078,-0.66674 -0.11822,-1.18886 -0.0567,-0.54446 -0.0567,-0.54446 -0.0883,-0.0728 -0.79014,0.23796 -0.67957,0.29435 -1.49316,0.68755 -0.83005,0.37086 -1.56016,0.73697 -0.70776,0.34964 -0.83591,0.40968 -0.23397,0.10361 -0.51737,0.14021 -0.29987,0.0143 -0.50088,0.16255 l -2.50157,1.84525 z m 42.35915,-7.97602 q 0.13276,0.0531 0.47793,0.19119 0.31861,0.12746 0.69033,0.27617 0.38234,0.12215 0.7275,0.26023 0.32924,0.1009 0.462,0.15401 0.32923,0.10091 1.02488,0.28681 0.66909,0.17526 1.40191,0.34523 0.71689,0.13278 1.35413,0.23371 0.6213,0.0637 0.80717,-0.0159 l -0.21242,-0.085 q -0.37171,-0.14871 -0.73813,-0.23368 -0.39296,-0.0956 -0.79122,-0.25492 -2.25686,-0.90285 -4.32784,-2.03934 -2.09754,-1.14712 -4.35439,-2.04996 -0.58413,-0.23368 -1.36473,-0.51515 -0.76999,-0.30804 -1.61432,-0.5842 -0.83372,-0.30272 -1.6515,-0.56826 -0.81778,-0.26555 -1.47094,-0.40365 -0.16993,-0.0372 -0.43014,-0.0797 -0.27614,-0.0797 -0.53634,-0.12215 -0.26021,-0.0425 -0.44075,-0.0531 -0.20711,-0.0213 -0.20711,-0.0213 l -0.14869,0.0637 q -0.11153,0.0478 -0.1965,0.41421 -0.10091,0.32923 -0.14341,0.74344 -0.0319,0.38765 0.0106,0.74345 0.0159,0.34516 0.1115,0.4142 0.59475,0.36113 0.91866,0.70631 0.29736,0.33457 0.47259,0.74347 0.14868,0.39828 0.24424,0.92931 0.0956,0.53104 0.21767,1.2267 0.154,0 0.19648,0.2018 0.0425,0.20179 0.0637,0.45669 0.005,0.21773 0.0372,0.44607 0.0425,0.2018 0.14867,0.24428 0.0266,0.0106 0.0797,0.0319 0.0637,-0.005 0.0903,0.005 -0.005,-0.0637 0.0106,-0.18055 0.0159,-0.11683 0.0106,-0.18056 0.0106,-0.18056 -0.0796,-0.80186 -0.0796,-0.64787 -0.17519,-1.33291 -0.0956,-0.68503 -0.19112,-1.21607 -0.085,-0.55758 -0.085,-0.55758 0.069,-0.0956 0.84966,0.0319 0.75406,0.11685 1.66743,0.29743 0.92399,0.15404 1.74708,0.32932 0.79655,0.16465 0.93992,0.19121 0.26021,0.0425 0.55228,0.005 0.30269,-0.0637 0.54165,0.0319 l 2.97374,1.18963 z m 31.85162,75.80239 q 0.11704,-0.11062 0.42137,-0.39825 0.28091,-0.26549 0.60865,-0.57524 0.30561,-0.33316 0.60994,-0.62078 0.25879,-0.28891 0.37584,-0.39953 0.25879,-0.28891 0.77766,-0.91226 0.49546,-0.60123 1.01561,-1.27011 0.47462,-0.67018 0.879,-1.27397 0.35886,-0.60508 0.36529,-0.83275 l -0.18728,0.177 q -0.32774,0.30975 -0.58781,0.64418 -0.28349,0.35657 -0.63464,0.68844 -1.98982,1.88062 -4.13066,3.46076 -2.16425,1.60227 -4.15408,3.48288 -0.51501,0.48675 -1.17177,1.15178 -0.67888,0.64162 -1.36033,1.37431 -0.70358,0.70928 -1.36162,1.41985 -0.65804,0.71056 -1.10796,1.31307 -0.11833,0.15616 -0.28478,0.4021 -0.21196,0.24465 -0.37841,0.4906 -0.16644,0.24595 -0.26264,0.42551 -0.11962,0.20169 -0.11962,0.20169 l -0.005,0.18214 q -0.004,0.13658 0.33059,0.39668 0.2889,0.2588 0.6923,0.49802 0.38126,0.21583 0.76509,0.34059 0.36043,0.14687 0.47619,0.0818 0.65033,-0.43736 1.15635,-0.60536 0.48261,-0.14589 0.98349,-0.13175 0.47747,0.0363 1.06557,0.18956 0.58809,0.15331 1.35704,0.35729 0.0728,-0.15745 0.29919,-0.10549 0.22638,0.052 0.49702,0.15074 0.22508,0.0975 0.47362,0.17286 0.22638,0.052 0.32002,-0.0365 0.0234,-0.0221 0.0702,-0.0663 0.0247,-0.0676 0.0481,-0.0898 -0.0677,-0.0247 -0.17955,-0.0962 -0.11191,-0.0715 -0.17956,-0.0962 -0.17955,-0.0962 -0.85744,-0.29762 -0.70001,-0.22482 -1.44555,-0.45092 -0.74554,-0.22611 -1.33363,-0.37942 -0.61022,-0.17671 -0.61022,-0.17671 -0.0651,-0.11576 0.43423,-0.8536 0.47589,-0.7157 1.09226,-1.56415 0.59423,-0.87186 1.16249,-1.63054 0.54485,-0.73654 0.63977,-0.87057 0.16644,-0.24595 0.2665,-0.56212 0.0779,-0.33958 0.28862,-0.5387 l 2.62189,-2.47799 z m -67.32548,16.95833 q -0.11654,-0.0363 -0.41954,-0.13073 -0.2797,-0.0871 -0.60601,-0.18883 -0.31906,-0.12497 -0.62206,-0.21938 -0.27244,-0.11044 -0.38898,-0.14675 -0.27244,-0.11045 -0.83334,-0.362 -0.53762,-0.24418 -1.11456,-0.52628 -0.54639,-0.2981 -1.02286,-0.57442 -0.44589,-0.29236 -0.52611,-0.44521 l 0.18646,0.0581 q 0.32631,0.10167 0.6148,0.24267 0.3118,0.14827 0.66142,0.25721 1.98118,0.61731 3.96507,0.97975 2.00719,0.3697 3.98837,0.98701 0.51279,0.15978 1.18146,0.39369 0.67593,0.21061 1.38396,0.48234 0.71529,0.24843 1.40002,0.51289 0.68473,0.26447 1.19176,0.52477 0.13259,0.0669 0.32784,0.17882 0.22582,0.0959 0.42108,0.20787 0.19525,0.11195 0.32058,0.20212 0.14864,0.0974 0.14864,0.0974 l 0.0642,0.12224 q 0.0481,0.0917 -0.0929,0.3802 -0.11045,0.27244 -0.30537,0.56969 -0.1876,0.27398 -0.40738,0.48677 -0.19643,0.22008 -0.29692,0.21433 -0.58843,-0.0811 -0.9889,-0.0268 -0.37716,0.0615 -0.71343,0.23798 -0.31297,0.18376 -0.66225,0.48407 -0.34928,0.3003 -0.80479,0.69536 -0.10203,-0.0829 -0.23881,0.0278 -0.13685,0.11078 -0.28814,0.26821 -0.12072,0.14138 -0.26483,0.27547 -0.13685,0.11079 -0.23004,0.0818 -0.0233,-0.007 -0.0699,-0.0218 -0.0393,-0.0378 -0.0626,-0.0451 0.0378,-0.0393 0.0902,-0.12534 0.0524,-0.086 0.0902,-0.12533 0.0902,-0.12533 0.48457,-0.48828 0.40163,-0.38628 0.83384,-0.7886 0.43221,-0.40232 0.78149,-0.70262 0.35655,-0.32362 0.35655,-0.32362 0.006,-0.10044 -0.58,-0.43642 -0.56244,-0.32868 -1.26473,-0.70093 -0.69501,-0.39555 -1.33464,-0.72271 -0.61631,-0.31988 -0.72559,-0.37951 -0.19525,-0.11195 -0.36871,-0.29387 -0.16619,-0.20522 -0.37597,-0.27058 l -2.61049,-0.81339 z m -2.57779,-52.93315 q 0.0476,0.0182 0.0882,0.19773 0.0406,0.17947 0.0553,0.21242 0,0 -0.0349,-0.12268 -0.0441,-0.0988 -0.0532,-0.075 -0.10952,0.28594 -0.46798,0.72243 -0.33464,0.44563 -0.74076,0.86386 -0.40612,0.41825 -0.79043,0.70821 -0.38431,0.28998 -0.60232,0.28845 -0.13738,0.002 -0.38682,-0.20278 -0.25857,-0.18097 -0.58504,-0.47002 -0.3356,-0.26517 -0.69504,-0.53946 -0.36857,-0.25047 -0.72599,-0.38738 -0.0714,-0.0274 -0.41065,-0.21191 -0.37213,-0.16985 -0.78279,-0.38176 -0.41065,-0.21191 -0.7498,-0.39651 -0.37212,-0.16984 -0.44361,-0.19722 -0.33358,-0.12778 -0.40153,-0.23573 -0.0771,-0.0841 -0.21041,0.19264 -0.0639,0.1668 -0.29256,0.40709 -0.26161,0.25501 -0.30724,0.37415 -0.009,0.0238 0.0512,-0.0623 0.0365,-0.0953 0.0183,-0.0476 -0.25556,0.66718 -0.30782,1.30293 -0.0852,0.65046 -0.29512,1.1985 -0.0639,0.1668 -0.0675,0.2474 -0.0127,0.10444 -0.0127,0.10444 -0.0329,0.0147 -0.0953,-0.0365 -0.0714,-0.0274 -0.28593,-0.10952 -0.0238,-0.009 -0.31687,0.0426 -0.29304,0.0517 -0.5293,0.0978 -0.26008,0.037 -0.29304,0.0517 l -1.00429,-0.30277 1.83083,-2.14039 q 0.0274,-0.0714 0.1389,-0.22003 0.0877,-0.15768 0.21747,-0.35389 0.0968,-0.1815 0.21756,-0.35384 0.0877,-0.15768 0.11509,-0.22915 0.0182,-0.0476 0.0548,-0.14297 0.0127,-0.10443 0.031,-0.1521 -1.19139,-0.45635 -2.41929,-0.81738 -1.23702,-0.33722 -2.45224,-0.8027 -1.14374,-0.43809 -2.16834,-0.83056 -1.02458,-0.39246 -2.26566,-1.00446 -0.0953,-0.0365 -0.31888,-0.0948 -0.25652,-0.0436 -0.48009,-0.10197 -0.2474,-0.0675 -0.40507,-0.15516 -0.19062,-0.073 -0.13586,-0.21598 l 0.61906,-1.4023 q 0.0714,0.0274 0.26161,-0.255 0.15715,-0.26769 0.34732,-0.55006 0.15714,-0.26769 0.32551,-0.4218 0.15919,-0.13028 0.23474,0.17184 0.83751,0.23888 1.29381,0.33164 0.43243,0.0837 0.76402,0.0741 0.33156,-0.01 0.69052,-0.0907 0.33512,-0.0902 0.96885,-0.17536 0.94504,-0.18449 1.79678,-0.2681 0.82791,-0.0927 1.70145,-0.30461 0.326,-0.0664 0.57138,-0.13633 0.22156,-0.0791 0.45782,-0.12521 0.21243,-0.0553 0.46338,-0.0684 0.24182,0.0107 0.6028,0.0669 0.0714,0.0274 0.22004,0.13889 0.12473,0.10239 0.14855,0.11152 0.0147,0.0329 0.11356,-0.0111 0.0659,-0.0294 0.0897,-0.0203 0,0 0.11707,-0.0918 0.10795,-0.0679 0.24895,-0.15056 0.14094,-0.0826 0.24893,-0.15057 0.10795,-0.0679 0.13182,-0.0588 0.0897,-0.0203 0.45426,-0.0446 0.3554,-4.8e-4 0.45984,0.0122 l 0.0933,-0.10089 q 0.0624,0.0512 0.35742,0.1369 0.28593,0.10952 0.41419,0.13135 0,0 0.12268,-0.0349 0.0988,-0.0441 0.13181,-0.0588 0.10795,-0.0679 0.44312,-0.15816 0.30217,-0.0755 0.63729,-0.16575 0.30216,-0.0755 0.53285,-0.17843 0.22156,-0.0791 0.1592,-0.13028 l 0.83502,-0.25396 q 0.0806,0.004 0.13943,0.13533 -0.0583,0.22356 -0.25398,0.44919 -0.22867,0.24029 -0.32195,0.34118 -0.24336,0.20735 -0.63834,0.73915 -0.39497,0.53181 -0.83557,1.18275 -0.44061,0.65095 -0.85181,1.3678 -0.4112,0.71685 -0.71086,1.28517 -0.30875,0.59216 -0.43096,0.98252 -0.15517,0.40508 -0.0269,0.42688 z m -14.77888,-4.43135 q 1.06514,0.57194 1.58581,0.85333 0.51153,0.30524 0.58301,0.33263 1.53765,0.47968 2.44667,0.74591 0.89987,0.29007 1.36171,0.43967 0.45274,0.17341 0.52421,0.20079 0.0714,0.0274 -0.0897,0.0203 0.20886,0.0254 0.49787,-0.30112 0.27988,-0.30265 0.59981,-0.78123 0.2961,-0.4877 0.62872,-1.07072 0.29961,-0.56833 0.56636,-1.12192 0.25755,-0.5298 0.43096,-0.98253 0.16429,-0.4289 0.20436,-0.60481 0,0 -0.0238,-0.009 -0.0568,0.006 -0.0806,-0.004 -1.19801,0.0603 -2.4234,0.19201 -1.2254,0.13175 -2.43608,0.29646 -0.92678,0.13683 -1.82415,0.33958 -0.92121,0.19361 -1.65736,0.40346 -0.73615,0.20985 -1.18839,0.39184 -0.47607,0.17286 -0.52171,0.29199 z m 8.55809,-3.22497 q -0.0218,0.12826 0.0826,0.14095 0.10443,0.0127 0.15008,-0.10647 0.004,-0.0806 -0.1009,-0.0933 -0.13738,0.002 -0.13182,0.0588 z m -2.98106,8.99527 q -0.0456,0.11914 0.0735,0.16477 0.0953,0.0365 0.14094,-0.0826 0.0274,-0.0714 -0.0679,-0.10795 -0.11914,-0.0456 -0.1465,0.0258 z m 58.60518,-14.20489 q -0.84212,-1.21998 -2.00382,-1.94623 -1.15587,-0.76693 -2.66038,-0.69161 -0.29626,0.0406 -0.84812,0.1277 -0.54604,0.0464 -0.90621,0.24385 l -0.0697,-0.0929 q -0.20331,-0.31949 -0.1451,-1.01657 0.0814,-0.71449 0.30808,-1.57418 0.23247,-0.90035 0.61597,-1.84134 0.40675,-0.95841 0.85995,-1.80646 0.43578,-0.87127 0.87734,-1.49278 0.44736,-0.66215 0.8366,-0.91769 0.59255,-0.37168 1.33028,-0.45293 0.74357,-0.12189 1.52776,-0.0927 0.7842,0.0291 1.58001,0.12218 0.77839,0.0698 1.44641,0.0408 l 0.0465,-0.0349 0.0465,-0.0349 q 0.0988,-0.4008 0.16855,-0.74352 0.0697,-0.34272 0.17435,-0.63895 0.10459,-0.29624 0.28471,-0.54019 0.16268,-0.26719 0.50545,-0.48786 0.25561,-0.19166 0.74359,-0.41233 0.47053,-0.24394 0.97596,-0.44135 0.52863,-0.21487 1.04564,-0.34841 0.51701,-0.13353 0.84811,-0.12768 0.0813,0.0116 0.27878,0.2266 0.18001,0.19175 0.38909,0.4706 0.23229,0.26146 0.40075,0.53447 0.17424,0.23238 0.20331,0.31948 0.78985,1.15028 0.96396,2.39921 0.15669,1.2257 -0.0178,2.59076 -0.0174,0.12194 -0.0349,0.3892 -0.0116,0.22654 -0.0698,0.48793 -0.0349,0.24398 -0.11043,0.48213 -0.0697,0.1975 -0.20916,0.30204 l -0.20336,0.11611 q -0.15682,-0.35435 -0.13933,-0.62157 4e-5,-0.29045 0.0756,-0.52861 0.0814,-0.2788 0.13949,-0.54021 0.0813,-0.27881 0.0698,-0.63315 0.0407,-0.57508 -0.11024,-0.9701 -0.15098,-0.39503 -0.45298,-0.89463 l -0.0116,-0.0639 q -0.0349,-0.0465 -0.18001,-0.19174 -0.12198,-0.16268 -0.24394,-0.32534 -0.13939,-0.1859 -0.26135,-0.34856 -0.12197,-0.16267 -0.17424,-0.23238 -0.0871,0.029 -0.28464,0.10455 -0.17428,0.0581 -0.38921,0.11031 -0.19168,0.0349 -0.36016,0.0522 -0.16264,-0.0233 -0.18587,-0.15106 -0.0291,0.0581 -0.1685,0.16259 -0.13943,0.10455 -0.16851,0.1626 -0.0697,0.0522 -0.13939,-0.0407 -0.36011,-0.23821 -0.79001,0.0115 -0.40666,0.2323 -0.79007,0.44719 -0.0291,0.058 -0.23822,0.21486 -0.22653,0.13361 -0.27301,0.16846 -0.30212,0.51695 -0.3777,1.04556 -0.093,0.50536 -0.0873,1.04559 0.029,0.52281 0.1567,1.08047 0.11029,0.53443 0.20318,1.04563 0.0406,0.29626 0.20905,0.5693 0.19165,0.25561 0.26713,0.59834 0.0697,0.23816 0.0638,0.56929 -0.006,0.33111 -0.20918,0.44726 -0.0697,0.0522 -0.14519,10e-6 -0.0581,-0.029 -0.20908,-0.13365 -0.12774,-0.12203 -0.16259,-0.16851 -0.25558,-0.3892 -0.36586,-0.77844 -0.10451,-0.42986 -0.19741,-0.79584 -0.0871,-0.40663 -0.22063,-0.77842 -0.11032,-0.38921 -0.36586,-0.77844 l -0.10454,-0.13943 q -0.49955,-0.13366 -1.33602,-0.23252 -0.8539,-0.1221 -1.76589,-0.12802 -0.90618,-0.0466 -1.73106,0.0637 -0.80164,0.0928 -1.23734,0.38323 -0.15683,0.0814 -0.47638,0.42981 -0.29632,0.33105 -0.60422,0.74347 -0.32535,0.38915 -0.54614,0.77252 -0.21496,0.34269 -0.12785,0.45888 -0.0232,0.0174 0.44727,0.064 0.4531,0.0233 1.0456,0.0873 0.57507,0.0407 1.14434,0.12213 0.59249,0.064 0.84808,0.16276 0.38917,0.18013 0.66213,0.59259 0.2962,0.39505 0.54014,0.86558 0.24394,0.47053 0.46459,0.95853 0.20326,0.46474 0.44138,0.83073 0.25558,0.3892 0.59235,1.22574 0.33681,0.83654 0.55742,1.76018 0.22063,0.92364 0.20891,1.73108 -0.0117,0.80744 -0.48809,1.09201 -0.12197,-0.16266 -0.0522,-0.36016 0.0755,-0.23815 -0.0697,-0.3834 -0.18579,-0.73194 -0.41805,-1.57426 -0.23225,-0.84232 -0.65621,-1.50459 z m 6.27903,3.09695 q -0.11618,0.0871 -0.41828,0.31362 -0.27885,0.20908 -0.60418,0.45302 -0.34273,0.22073 -0.64482,0.44724 -0.29625,0.18588 -0.41244,0.273 -0.29625,0.18588 -0.92949,0.55172 -0.60996,0.34849 -1.28386,0.70853 -0.66806,0.31941 -1.26641,0.58654 -0.59254,0.22647 -0.79584,0.1974 l 0.18589,-0.13939 q 0.32533,-0.24393 0.66228,-0.42395 0.36019,-0.19746 0.70875,-0.45881 1.97522,-1.48102 3.70649,-3.14214 1.75449,-1.67855 3.72971,-3.15957 0.51123,-0.38332 1.20252,-0.86541 0.6739,-0.50529 1.42912,-0.99894 0.73777,-0.51693 1.46977,-0.99316 0.73198,-0.47623 1.33614,-0.78403 0.15683,-0.0813 0.40082,-0.19167 0.24984,-0.15095 0.49377,-0.26136 0.244,-0.11033 0.41825,-0.16841 0.19753,-0.0755 0.19753,-0.0755 l 0.16264,0.0233 q 0.12194,0.0174 0.30198,0.3544 0.18589,0.29626 0.33683,0.6913 0.13356,0.37179 0.18579,0.73195 0.0755,0.34274 -5e-5,0.43567 -0.48802,0.51112 -0.71462,0.93514 -0.20336,0.4066 -0.26732,0.85388 -0.0407,0.42985 0.006,0.97589 0.0464,0.54605 0.11022,1.26055 -0.15104,0.0406 -0.13945,0.24976 0.0116,0.20913 0.058,0.46472 0.0523,0.21492 0.0813,0.44729 0.0116,0.20913 -0.0814,0.27883 -0.0232,0.0174 -0.0697,0.0522 -0.0639,0.0117 -0.0871,0.029 -0.0116,-0.0639 -0.0581,-0.17429 -0.0465,-0.11035 -0.0581,-0.17428 -0.058,-0.17428 -0.1335,-0.80745 -0.0929,-0.65642 -0.1799,-1.35349 -0.087,-0.69709 -0.13345,-1.24313 -0.0638,-0.56928 -0.0638,-0.56928 -0.0929,-0.0756 -0.82489,0.25549 -0.70873,0.31359 -1.55688,0.73172 -0.86558,0.39489 -1.62659,0.784 -0.73778,0.37168 -0.87139,0.43555 -0.244,0.11033 -0.54025,0.15096 -0.31368,0.0174 -0.52282,0.1742 l -2.60264,1.95146 z m -18.43834,54.36398 q -0.0286,-0.12366 -0.10309,-0.44516 -0.0687,-0.29677 -0.14891,-0.64301 -0.0554,-0.35198 -0.12989,-0.67348 -0.044,-0.30251 -0.0726,-0.42616 -0.044,-0.30251 -0.11298,-0.93797 -0.0632,-0.61074 -0.11325,-1.27665 -0.0195,-0.64693 -0.0219,-1.21965 0.0281,-0.55372 0.12313,-0.70602 l 0.0458,0.19786 q 0.0802,0.34624 0.10515,0.67921 0.0307,0.3577 0.1166,0.72866 0.48682,2.10217 1.20377,4.07285 0.72268,1.99543 1.20949,4.0976 0.126,0.54408 0.26735,1.26702 0.16609,0.71721 0.29414,1.49534 0.15281,0.7724 0.27513,1.52579 0.12233,0.75341 0.15516,1.34513 0.01,0.15412 0.0117,0.38816 0.0325,0.25305 0.0346,0.48709 0.002,0.23404 -0.013,0.39388 -0.009,0.18458 -0.009,0.18458 l -0.076,0.12183 q -0.057,0.0914 -0.38997,0.11638 -0.30251,0.044 -0.67165,0.0252 -0.34442,-0.0245 -0.65083,-0.10986 -0.30067,-0.0607 -0.34832,-0.15385 -0.23637,-0.57064 -0.4954,-0.90152 -0.2533,-0.30615 -0.58835,-0.51519 -0.32932,-0.18432 -0.78229,-0.34 -0.45298,-0.15567 -1.04679,-0.3569 0.0209,-0.13512 -0.15047,-0.19968 -0.1713,-0.0646 -0.39205,-0.11767 -0.19031,-0.0341 -0.38633,-0.0929 -0.1713,-0.0646 -0.19421,-0.16349 -0.006,-0.0248 -0.0172,-0.0742 0.0133,-0.0552 0.008,-0.08 0.0552,0.0133 0.15985,0.0151 0.10466,0.002 0.15985,0.0151 0.15985,0.0151 0.69273,0.17832 0.55763,0.15751 1.14572,0.33401 0.58808,0.1765 1.04105,0.33217 0.4777,0.14995 0.4777,0.14995 0.0932,-0.0477 0.087,-0.74974 -5.2e-4,-0.67738 -0.0354,-1.50315 -0.0102,-0.83149 -0.0526,-1.57733 -0.0367,-0.72111 -0.0406,-0.8505 -0.002,-0.23404 0.07,-0.48526 0.0968,-0.25694 0.0453,-0.47952 l -0.64146,-2.76991 z m -6.35594,1.47191 q -0.0286,-0.12366 -0.10309,-0.44516 -0.0687,-0.29678 -0.14891,-0.64301 -0.0554,-0.35198 -0.12989,-0.67348 -0.044,-0.30251 -0.0726,-0.42617 -0.044,-0.3025 -0.11299,-0.93796 -0.0632,-0.61074 -0.11324,-1.27665 -0.0195,-0.64693 -0.0219,-1.21966 0.0281,-0.55371 0.12313,-0.70601 l 0.0458,0.19786 q 0.0802,0.34623 0.10515,0.67921 0.0307,0.35769 0.11659,0.72866 0.48682,2.10216 1.20377,4.07285 0.72268,1.99543 1.2095,4.09759 0.126,0.54408 0.26734,1.26702 0.1661,0.71721 0.29415,1.49535 0.1528,0.7724 0.27513,1.52579 0.12233,0.75341 0.15516,1.34513 0.01,0.15412 0.0117,0.38816 0.0325,0.25305 0.0346,0.48709 0.002,0.23404 -0.013,0.39388 -0.009,0.18458 -0.009,0.18458 l -0.076,0.12183 q -0.0569,0.0914 -0.38997,0.11638 -0.3025,0.044 -0.67164,0.0253 -0.34443,-0.0245 -0.65083,-0.10986 -0.30068,-0.0607 -0.34832,-0.15385 -0.23638,-0.57065 -0.49541,-0.90153 -0.2533,-0.30614 -0.58835,-0.51518 -0.32931,-0.18432 -0.78228,-0.34 -0.45298,-0.15567 -1.04679,-0.3569 0.0208,-0.13512 -0.15047,-0.19969 -0.1713,-0.0645 -0.39205,-0.11766 -0.19031,-0.0341 -0.38633,-0.0929 -0.1713,-0.0646 -0.19421,-0.16349 -0.006,-0.0248 -0.0172,-0.0742 0.0133,-0.0552 0.008,-0.08 0.0552,0.0133 0.15984,0.0151 0.10467,0.002 0.15986,0.0151 0.15984,0.0151 0.69273,0.17832 0.55763,0.1575 1.14571,0.33401 0.58809,0.1765 1.04105,0.33217 0.47771,0.14995 0.47771,0.14995 0.0932,-0.0476 0.087,-0.74975 -5.1e-4,-0.67737 -0.0354,-1.50314 -0.0102,-0.83149 -0.0526,-1.57734 -0.0367,-0.72111 -0.0406,-0.85049 -0.002,-0.23404 0.07,-0.48526 0.0968,-0.25694 0.0453,-0.47952 l -0.64145,-2.76991 z m -11.19469,-42.17768 q -0.20183,-0.87149 -0.0199,-1.86351 0.21891,-0.96893 0.74306,-1.85024 0.53113,-0.85125 1.32829,-1.5108 0.8272,-0.66651 1.87902,-0.91009 0.66113,-0.15311 1.89578,-0.15406 1.26469,-0.008 2.56419,0.13444 1.3365,0.16544 2.47657,0.4397 1.14006,0.27427 1.58198,0.67854 0.0509,0.0832 0.22681,0.29576 0.21289,0.23567 0.27995,0.2518 0.17809,0.0854 0.4163,0.15691 0.26825,0.0645 0.50645,0.13602 0.27521,0.0946 0.52732,0.22618 0.25908,0.16165 0.44888,0.43432 0.5577,0.63077 0.94679,1.49056 0.38909,0.85979 0.57003,1.64113 0.12527,0.54093 0.0816,0.89933 -0.007,0.3815 -0.18442,0.70765 -0.14772,0.31917 -0.42958,0.60609 -0.2749,0.31696 -0.68613,0.72883 l -0.18031,0.0417 q -0.37896,0.27774 -0.72091,0.57857 -0.30495,0.32394 -0.87593,0.45616 -0.42072,0.0974 -1.09356,0.0633 -0.67284,-0.0342 -1.47063,-0.19771 -0.76079,-0.14045 -1.57249,-0.3641 -0.81171,-0.22364 -1.51018,-0.50518 -0.69151,-0.25149 -1.20965,-0.57477 -0.48114,-0.3002 -0.64089,-0.57984 l -2.40793,-1.37383 q -0.0531,0.044 -0.0784,0.20814 -0.0253,0.16418 -0.0184,0.19423 l 0.0139,0.0601 q 0.31317,1.35232 0.78799,2.44557 0.47482,1.09324 1.07901,2.06153 0.61115,0.99835 1.3286,1.90875 0.75445,0.93351 1.6269,1.96633 0.007,0.03 0.0879,0.10628 0.11795,0.0993 0.23598,0.19866 0.11795,0.0993 0.19898,0.17557 0.088,0.10628 0.10187,0.16639 l 4.66465,4.55582 q 0.0117,0.18728 0.46278,0.49443 0.4881,0.33024 1.04328,0.67663 0.58521,0.33942 1.07331,0.66967 0.52511,0.35335 0.64089,0.57984 -0.51562,-0.0389 -1.24414,-0.31348 -0.72851,-0.27458 -1.43393,-0.58616 -0.67537,-0.31856 -1.20965,-0.57478 -0.49728,-0.23314 -0.61053,-0.17525 -0.55738,-0.21922 -0.88352,-0.397 -0.29609,-0.18474 -0.52511,-0.35334 -0.22903,-0.1686 -0.43496,-0.37423 -0.19897,-0.17556 -0.47893,-0.42736 -0.037,-0.0231 -0.30304,-0.21479 -0.23598,-0.19865 -0.51594,-0.45045 -0.273,-0.22175 -0.546,-0.44351 -0.23598,-0.19865 -0.27299,-0.22174 -0.19201,-0.14552 -0.67094,-0.57288 -0.47197,-0.39732 -1.03188,-0.90092 -0.52985,-0.51055 -1.08977,-1.01416 -0.52985,-0.51056 -0.86769,-0.87561 0.0601,-0.0139 0.18251,-0.16891 0.15248,-0.16197 0.13856,-0.22208 -0.0417,-0.18031 -0.32867,-0.46215 -0.2499,-0.25876 -0.59692,-0.5267 -0.31696,-0.27489 -0.67094,-0.57288 -0.34702,-0.26793 -0.51594,-0.45045 -0.58996,-0.49665 -0.88415,-1.2201 -0.25714,-0.70037 -0.47735,-1.37763 l -0.18094,-0.78133 q -0.31728,-0.68645 -0.70163,-1.38902 -0.38434,-0.70259 -0.56528,-1.48392 z m 8.62196,-5.70127 q 0.15025,-0.0348 0.11545,-0.18506 -0.0348,-0.15025 -0.18505,-0.11546 -0.15026,0.0348 -0.11546,0.18505 0.0348,0.15027 0.18506,0.11547 z m -4.79972,3.20129 q -0.0161,0.067 -0.0715,0.2382 -0.0184,0.19423 -0.004,0.25433 l 0.0209,0.0901 q 0.0835,0.36062 0.76616,1.12076 0.7127,0.75319 1.6057,1.46462 0.93002,0.73453 1.83442,1.22168 0.9414,0.51024 1.48234,0.38498 0.27046,-0.0626 0.69118,-0.16007 0.45078,-0.10439 0.8946,-0.23878 0.44383,-0.1344 0.82057,-0.28498 0.40681,-0.15754 0.55928,-0.3195 0.68613,-0.72882 1.09262,-1.29791 0.40648,-0.56908 0.1977,-1.47063 -0.25054,-1.08186 -0.91705,-1.90907 -0.66651,-0.82721 -1.63797,-1.33049 -0.94141,-0.51024 -2.14378,-0.64342 -1.17233,-0.14014 -2.46455,0.15912 l -0.8114,0.1879 q -0.39256,0.62919 -0.9724,1.27008 -0.54979,0.63393 -0.94236,1.26311 z m -2.121,4.92404 q 0.15025,-0.0348 0.10849,-0.21511 -0.0417,-0.18031 -0.19201,-0.14551 -0.15026,0.0348 -0.1085,0.21511 0.0417,0.1803 0.19202,0.14551 z m -0.13856,0.22206 q 0.15026,-0.0348 0.1085,-0.2151 -0.0418,-0.18031 -0.19201,-0.14552 -0.15026,0.0348 -0.10851,0.21511 0.0418,0.18031 0.19202,0.14551 z m 7.34177,7.22884 q 0.03,-0.007 -0.0369,-0.0231 -0.0601,0.0139 -0.15027,0.0348 -0.0901,0.0209 -0.18726,0.0118 -0.0601,0.0139 -0.0901,0.0209 -0.0671,-0.0161 -0.0231,0.037 0.0509,0.0832 0.13187,0.15944 0.081,0.0762 0.15501,0.12242 0.074,0.0462 0.12716,0.002 z m 4.74152,5.29793 q 0.1433,-0.0648 0.0715,-0.2382 -0.0718,-0.17336 -0.21511,-0.1085 -0.13634,0.0949 -0.0715,0.2382 0.10187,0.16639 0.21511,0.1085 z m -15.09826,-12.55682 q -0.0348,-0.15025 -0.12527,-0.54092 -0.0835,-0.36062 -0.18094,-0.78135 -0.0674,-0.42767 -0.1579,-0.81834 -0.0535,-0.36757 -0.0883,-0.51783 -0.0535,-0.36757 -0.1373,-1.13974 -0.0769,-0.74211 -0.1376,-1.5513 -0.0237,-0.78609 -0.0266,-1.48202 0.0342,-0.67283 0.14963,-0.85789 l 0.0557,0.24042 q 0.0974,0.42071 0.12779,0.8253 0.0373,0.43465 0.14172,0.88542 0.59154,2.55439 1.46272,4.94902 0.87815,2.4247 1.46969,4.97908 0.15311,0.66114 0.32492,1.53959 0.20182,0.87149 0.35745,1.81701 0.18573,0.93854 0.33441,1.85401 0.14867,0.91548 0.18852,1.6345 0.0118,0.18726 0.0143,0.47164 0.0396,0.30747 0.0421,0.59185 0.003,0.28438 -0.0158,0.47861 -0.0114,0.22428 -0.0114,0.22428 l -0.0924,0.14804 q -0.0693,0.11099 -0.47386,0.14146 -0.36759,0.0534 -0.81614,0.0307 -0.4185,-0.0297 -0.79082,-0.1335 -0.36537,-0.0737 -0.42325,-0.18695 -0.28724,-0.69339 -0.60199,-1.09546 -0.30779,-0.372 -0.71491,-0.62602 -0.40016,-0.22396 -0.95058,-0.41313 -0.55042,-0.18917 -1.27198,-0.43369 0.0253,-0.16417 -0.18283,-0.24263 -0.20816,-0.0785 -0.4764,-0.14297 -0.23123,-0.0414 -0.46944,-0.11293 -0.20815,-0.0785 -0.23599,-0.19867 -0.007,-0.03 -0.0209,-0.0901 0.0161,-0.0671 0.009,-0.0971 0.0671,0.0162 0.19423,0.0184 0.12716,0.002 0.19423,0.0184 0.19422,0.0184 0.84176,0.21669 0.67758,0.19137 1.39218,0.40585 0.71459,0.21447 1.26501,0.40364 0.58048,0.18221 0.58048,0.18221 0.11326,-0.0578 0.10565,-0.91104 -6.3e-4,-0.82309 -0.043,-1.82651 -0.0123,-1.01037 -0.0639,-1.91666 -0.0446,-0.87624 -0.0493,-1.03345 -0.003,-0.28439 0.0851,-0.58965 0.11767,-0.31222 0.055,-0.58268 l -0.77945,-3.36579 z" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.8469px;line-height:1.25;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.84661"
+     x="293.49426"
+     y="604.31396"
+     id="text8574"><tspan
+       id="tspan8572"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.8469px;font-family:'Hobbiton Brushhand';-inkscape-font-specification:'Hobbiton Brushhand, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.84661"
+       x="293.49426"
+       y="604.31396" /></text>
+</g>
+</template>

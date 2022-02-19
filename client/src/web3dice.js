@@ -62,6 +62,8 @@ export const web3dice = {
 
   async switchNetwork() {
 
+    //Todo: this will need to be smarter when we
+    //release to polygon.
     const chainId = '0x4'
     try {
       await window.ethereum.request({
@@ -72,32 +74,38 @@ export const web3dice = {
     }
   },
 
-  getBlock() {
-    this.provider.getBlockNumber().then(block => {
-      store.block = block
-      console.log('block number is' + block)
-    })
-  },
   async roll(diceId) {
+    store.isRolling[diceId] = true
     console.log('rolling')
     try {
       const roll = await this.diceContract.roll(diceId)
       store.lastRoll[diceId] = roll
       console.log('roll', roll)
+      //store.isRolling[diceId] = false
+      setTimeout(() => {store.isRolling[diceId] = false}, 1000)
       return roll
+    } catch (err) {
+      console.log("Error: ", err)
+      store.isRolling[diceId] = false
+      return 'failed'
+    }
+  },
+
+  async getTraits(diceId) {
+    try {
+      const traits = await this.diceContract.getTraits(diceId)
+      store.diceTraits[diceId] = traits
+      return traits
     } catch (err) {
       console.log("Error: ", err)
       return 'failed'
     }
   },
-  async getTraits(diceId) {
-    try {
-      const traits = await this.diceContract.getTraits(diceId)
-    } catch (err) {
-      console.log("Error: ", err)
-      return 'failed'
-    }
-    store.diceTraits[diceId] = traits
-    return traits
+
+  async getOwnedDice() {
+    const owned = [1,2]
+    store.ownedDice = owned
+    console.log('You have dice')
+    return owned
   }
 }
