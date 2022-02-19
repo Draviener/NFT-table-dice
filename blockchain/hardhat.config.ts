@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-import("./tasks/nft");
+import("./tasks/deploy+mint");
 
 import { HardhatUserConfig } from "hardhat/config";
 

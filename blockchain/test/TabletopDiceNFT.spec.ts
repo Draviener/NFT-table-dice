@@ -2,11 +2,7 @@ import { ethers, waffle } from "hardhat";
 import { Contract, Wallet } from "ethers";
 import { expect } from "chai";
 import { TransactionResponse } from "@ethersproject/abstract-provider";
-import sinon from "sinon";
 import { deployContractWithLibrary } from "./test-helpers";
-import * as provider from "../lib/provider";
-import { resourceLimits } from "worker_threads";
-import { deployContract } from "ethereum-waffle";
 
 describe("TabletopDiceNFT", () => {
   const TOKEN_URI = "https://hackerlink.s3.amazonaws.com/static/files/dice-with-color.png";
@@ -16,9 +12,7 @@ describe("TabletopDiceNFT", () => {
   let sides = 6;
 
   beforeEach(async () => {
-    sinon.stub(provider, "getProvider").returns(waffle.provider);
     [wallet] = waffle.provider.getWallets();
-    //deployedContract = await deployTestContract("TabletopDiceNFT");
     deployedContract = await deployContractWithLibrary("TabletopDiceNFT", "DiceLibrary");
   });
 

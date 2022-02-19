@@ -2,11 +2,9 @@ import { deployContractWithLibrary, getTestWallet } from "./test-helpers";
 import { waffle, run } from "hardhat";
 import { expect } from "chai";
 import sinon from "sinon";
-import * as provider from "../lib/provider";
 
 describe("tasks", () => {
   beforeEach(async () => {
-    sinon.stub(provider, "getProvider").returns(waffle.provider);
     const wallet = getTestWallet();
     sinon.stub(process, "env").value({
       ETH_PUBLIC_KEY: wallet.address,
