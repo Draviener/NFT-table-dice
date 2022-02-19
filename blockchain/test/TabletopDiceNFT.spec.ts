@@ -103,7 +103,7 @@ describe("TabletopDiceNFT", () => {
       let tokenId = 1;
       let numRolls = 10;
       for (var index = 0; index < numRolls; ++index) {
-        let rollResult = await deployedContract.roll(tokenId);
+        await ethers.provider.send('evm_mine', []); // Advance block number
         expect(await deployedContract.roll(tokenId))
           .to.be.within(1, sides, "Die result is out of allowed range!")
       }
@@ -114,7 +114,7 @@ describe("TabletopDiceNFT", () => {
         let tokenId = 1;
         let numRolls = 10;
         for (var index = 0; index < numRolls; ++index) {
-          let rollResult = await deployedContract.roll(tokenId);
+          await ethers.provider.send('evm_mine', []); // Advance block number
           expect(await deployedContract.roll(tokenId))
             .to.be.within(0, sides, "Die result is out of allowed range!")
         }
