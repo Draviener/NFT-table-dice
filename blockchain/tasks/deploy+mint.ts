@@ -4,7 +4,7 @@ import { TransactionResponse } from "@ethersproject/abstract-provider";
 import { env } from "../lib/env";
 import { getContract } from "../lib/contract";
 
-task("deploy-contract", "Deploy NFT contract").setAction(async (_, hre) => {
+task("deploy-contracts", "Deploy NFT contract").setAction(async (_, hre) => {
   // First deploy the Library, since an address is required
   const LibraryPromise = hre.ethers.getContractFactory("DiceLibrary");
   const libraryDeployed = await LibraryPromise.then((contractFactory) => contractFactory.deploy());
