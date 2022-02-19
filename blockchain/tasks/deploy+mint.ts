@@ -4,7 +4,7 @@ import { TransactionResponse } from "@ethersproject/abstract-provider";
 import { env } from "../lib/env";
 import { getContract } from "../lib/contract";
 
-task("deploy-contract", "Deploy NFT contract").setAction(async (_, hre) => {
+task("deploy-contracts", "Deploy NFT contract").setAction(async (_, hre) => {
   // First deploy the Library, since an address is required
   const LibraryPromise = hre.ethers.getContractFactory("DiceLibrary");
   const libraryDeployed = await LibraryPromise.then((contractFactory) => contractFactory.deploy());
@@ -22,6 +22,7 @@ task("deploy-contract", "Deploy NFT contract").setAction(async (_, hre) => {
     .then((contractFactory) => contractFactory.deploy())
     .then((result) => {
       process.stdout.write(`Contract address: ${result.address}`);
+      // TODO: Update contract address
     });
 });
 
@@ -30,15 +31,13 @@ task("mint-nft", "Mint Dice NFTs")
   .addParam("owner", "Who will own the NFT", env("ETH_PUBLIC_KEY"), types.string)
   .addParam("name", "The Name of the Die NFT", "🎲", types.string)
   .addParam("sides", "The Number of Faces", 10, types.int)
-  .addParam("tokenUri", "NFT Metadata URI", "https://partavate.com/token/nft-dice/", types.string)
   .setAction(async (taskArgs, hre) => {
     return getContract("TabletopDiceNFT", hre)
       .then((contract: Contract) => {
         return contract.mintNFT(
           taskArgs.owner,
           taskArgs.name,
-          taskArgs.sides,
-          taskArgs.tokenUri, {
+          taskArgs.sides, {
           gasLimit: 500_000,
         });
       })

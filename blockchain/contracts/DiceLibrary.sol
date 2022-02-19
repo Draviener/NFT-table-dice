@@ -7,7 +7,6 @@ library DiceLibrary {
 
     struct Dice {
         string name;
-        string tokenURI;
         uint8 sides;
         bool zeroBased;
         Geometries geometry;
@@ -23,36 +22,36 @@ library DiceLibrary {
         Elongated
     }
 
-    function createDice(DiceStorage storage self, string memory name, uint256 tokenId, uint8 sides, string memory tokenURI) internal {
+    function createDice(DiceStorage storage self, string memory name, uint256 tokenId, uint8 sides) internal {
         require(sides > 0, "Sides must be non-zero");
-
-        console.log("Creating Die w/ id: ", tokenId);
 
         // TODO: Have these settable by the caller
         Geometries geometry = Geometries.Standard;
         // TODO: Do any dice besides D10 have "0" faces?
         bool zeroBased = (sides == 10) ? true : false;
-        self.dice[tokenId] = Dice(name, tokenURI, sides, zeroBased, geometry);
+        self.dice[tokenId] = Dice(name, sides, zeroBased, geometry);
+    }
+
+    // URI path is composed of attributes
+    function getTokenURIpath(DiceStorage storage self, uint256 tokenId) internal view returns (string memory) {
+        // TODO: add other dice attributes in later commit
+        // return(string(abi.encodePacked("/", self.dice[tokenId].sides,"/", self.dice[tokenId].sides)));
+        return "/sides/color/font";
     }
 
     function getTraits(DiceStorage storage self, uint256 tokenId) public view 
-        returns (string memory name, string memory tokenURI, uint8 sides) {
-        return (self.dice[tokenId].name, self.dice[tokenId].tokenURI, self.dice[tokenId].sides);
+        returns (string memory name, string memory tokenURIpath, uint8 sides) {
+        return (self.dice[tokenId].name, getTokenURIpath(self, tokenId), self.dice[tokenId].sides);
     }
 
-    function random() private view returns(uint){
-        return uint(keccak256(abi.encode(block.difficulty, block.timestamp, msg.sender)));
+    function random(uint256 nonce) private view returns(uint){
+        return uint(keccak256(abi.encode(block.difficulty, block.timestamp, msg.sender, nonce)));
     }
 
-    function doRoll(DiceStorage storage self, uint256 tokenId) public view returns (uint8) {
+    function doRoll(DiceStorage storage self, uint256 tokenId, uint256 nonce) public view returns (uint8) {
         // TODO: Is there a better/cheaper way to do !(bool) -> int
         uint offset = (self.dice[tokenId].zeroBased) ? 0 : 1;
-        console.log("Rolling the dice!");
-        console.log("tokenId: ", tokenId);
-        console.log("Sides: ", self.dice[tokenId].sides);
-
-        uint8 result = uint8((random() % self.dice[tokenId].sides) + offset);
-        console.log("+++++ RESULT: ", result);
+        uint8 result = uint8((random(nonce) % self.dice[tokenId].sides) + offset);
         return result;
     }
 }
