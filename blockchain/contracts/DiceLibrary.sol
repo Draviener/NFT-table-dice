@@ -25,8 +25,6 @@ library DiceLibrary {
     function createDice(DiceStorage storage self, string memory name, uint256 tokenId, uint8 sides) internal {
         require(sides > 0, "Sides must be non-zero");
 
-        console.log("Creating Die w/ id: ", tokenId);
-
         // TODO: Have these settable by the caller
         Geometries geometry = Geometries.Standard;
         // TODO: Do any dice besides D10 have "0" faces?
@@ -53,10 +51,7 @@ library DiceLibrary {
     function doRoll(DiceStorage storage self, uint256 tokenId, uint256 nonce) public view returns (uint8) {
         // TODO: Is there a better/cheaper way to do !(bool) -> int
         uint offset = (self.dice[tokenId].zeroBased) ? 0 : 1;
-        console.log("Rolling the dice! ...");
-
         uint8 result = uint8((random(nonce) % self.dice[tokenId].sides) + offset);
-        console.log("+++++ RESULT: ", result);
         return result;
     }
 }

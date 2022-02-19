@@ -36,8 +36,6 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
         uint256 newId = _tokenIds.current();
         diceNFTs.createDice(name, newId, sides);
         _safeMint(owner, newId);
-
-        console.log("Created NFT: #%s; Sides: %s", newId, sides);
         _tokenIds.increment();
 
         return newId;
@@ -59,7 +57,6 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
     }
 
     function roll(uint256 tokenId, uint256 nonce) view public returns (uint8) {
-        console.log("ROLLING NFT #", tokenId);
         return diceNFTs.doRoll(tokenId, nonce);
     }
 
