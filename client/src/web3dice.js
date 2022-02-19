@@ -6,7 +6,7 @@ export const web3dice = {
   provider: null,  
   signer: null,
   diceContract: null,
-  diceContractAddress: '0x0a85f2835d2a81d066b3317146b7967f726e3091', //what will be the best way to populate this?
+  diceContractAddress: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512', //what will be the best way to populate this? A: (@excalq) the HH deploy task!
   async init() {
     try {
       this.provider = new ethers.providers.Web3Provider(window.ethereum,"any")
