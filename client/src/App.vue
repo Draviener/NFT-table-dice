@@ -43,13 +43,13 @@ export default {
         //let traits = await web3dice.getTraits(diceId)
         //console.log('traits: ', traits)
         if (store.selectedDice[0] != null) {
-          await  web3dice.roll(store.selectedDice[0])
+          await  web3dice.delayedRoll(store.selectedDice[0])
         }
         if (store.selectedDice[1] != null) {
-          await  web3dice.roll(store.selectedDice[1])
+          await  web3dice.delayedRoll(store.selectedDice[1])
         }
         if (store.selectedDice[2] != null) {
-          await  web3dice.roll(store.selectedDice[2])
+          await  web3dice.delayedRoll(store.selectedDice[2])
         }
       }
     },
@@ -116,7 +116,7 @@ export default {
             <text v-if="!store.diceSelected()">Select Your Dice</text>
             <rect x="-300" y="-100" width="600" height="200" fill="#000000" stroke="#ffffff" fill-opacity="0" stroke-width="0" class="can-click" @click="roll()" />
           </g>
-
+          <rect v-if="menu" x="-2000" y="-2000" width="4000" height="4000" fill="#000000" opacity="0.4" @click="closeMenu" />
           <dice-menu :show="menu" @close="closeMenu()" />        
         </g>
       </g>

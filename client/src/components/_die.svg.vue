@@ -18,7 +18,8 @@ export default {
   },
   data () {
     return {
-      rollingNumber: 1
+      rollingNumber: 1,
+      
     }
   },
   watch: {
@@ -67,8 +68,8 @@ export default {
 </script>
 
 <template>
-  <g>
-    <ellipse cx="0" cy="60" rx="60" ry="10" fill="#000000" opacity="0.25" />
+  <g  v-if="store.ownedDice[diceid] != null">
+    <ellipse cx="0" cy="60" rx="60" ry="10" fill="#000000" opacity="0.25" stroke-width="0" />
     <g class="dice" :class="{rolling: rolling}">
       <g fill="#ffffff" stroke="#ffffff">
       <animateTransform v-if="this.rolling" attributeName="transform"

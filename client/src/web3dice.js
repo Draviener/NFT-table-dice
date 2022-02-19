@@ -74,6 +74,12 @@ export const web3dice = {
     }
   },
 
+  async delayedRoll(diceId) {
+    let rollDelay = Math.floor(Math.random() * 100)
+    console.log('delay', rollDelay)
+    setTimeout(() => {this.roll(diceId)}, rollDelay)
+  },
+
   async roll(diceId) {
     store.isRolling[diceId] = true
     console.log('rolling')
@@ -103,9 +109,9 @@ export const web3dice = {
   },
 
   async getOwnedDice() {
-    const owned = [1,2]
+    const owned = [1,2,1,2,1,2]
     store.ownedDice = owned
-    console.log('You have dice')
+    console.log('You have dice', store.ownedDice)
     return owned
   }
 }
