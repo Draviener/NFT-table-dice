@@ -18,7 +18,7 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
     Counters.Counter private _tokenIds;
     string private _baseURIvalue;
 
-    constructor() ERC721("PolyDice: Dice Rolling Dapp", "PolyDice") {
+    constructor() ERC721("PolyDice dApp", "PolyDice") {
         _baseURIvalue = "https://dice.partavate.com";
     }
 
@@ -51,6 +51,21 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
 
         return newId;
     }
+
+    function mintNFTBatch(
+        address owner,
+        string calldata name,
+        uint8 sides,
+        uint8 styleId,
+        uint8 font,
+        uint16 count
+    ) public onlyOwner {
+        for (uint16 i = 0; i < count; i++) {
+            mintNFT(owner, name, sides, styleId, font);
+        }
+    }
+
+
 
     function getOwnedTokenIds() public view returns (uint256[] memory) {
         uint256 ownedCnt = balanceOf(msg.sender);

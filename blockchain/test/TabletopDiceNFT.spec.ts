@@ -31,6 +31,17 @@ describe("TabletopDiceNFT", () => {
     );
   }
 
+  async function mintNftBatch(count: number, owner=wallet.address): Promise<TransactionResponse> {
+    return deployedContract.mintNFTBatch(
+      owner, 
+      name,
+      sides,
+      styleId,
+      font,
+      count
+    );
+  }
+
   describe("mintNft", async () => {
     it("emits the Transfer event", async () => {
       await expect(mintNftDefault())
@@ -123,12 +134,10 @@ describe("TabletopDiceNFT", () => {
     it("gets the count of NFTs for this address", async () => {
       await expect(await deployedContract.balanceOf(wallet.address)).to.eq("0");
 
-      await mintNftDefault();
-      await mintNftDefault();
-      await mintNftDefault();
+      await mintNftBatch(4);
 
       let nftBalance = await deployedContract.balanceOf(wallet.address);
-      expect(nftBalance).to.eq("3");
+      expect(nftBalance).to.eq("4");
     });
   });
 
@@ -164,20 +173,11 @@ describe("TabletopDiceNFT", () => {
 
       let numMinted = 11;
       
-      // The first random NFTs will belong to someone else
-      for (let i = 0; i < Math.random() * 30; i++) {
-        await deployedContract.mintNFT(
-          otherAccount.address, 
-          "D20",
-          20, 
-          styleId,
-          font
-        );
-      }
+      // The first 5 NFTs will belong to someone else
+      await mintNftBatch(5, otherAccount.address);
       // Now generate NFTs for our wallet address
-      for (let i = 0; i < numMinted; i++) {
-        await mintNftDefault();
-      }
+      await mintNftBatch(numMinted);
+
       expect(await deployedContract.getOwnedTokenIds()).to.be.length(numMinted);
     });
   });
