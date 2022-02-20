@@ -57,18 +57,24 @@ export default {
     background () {
       return 1
     },
-    font () {
-      return this.diceid % 2
+    fontType () {
+      const typeId = this.diceid % 2
+      return typeId
     },
-    color () {
-      return 1
+    fontColor () {
+      const colorId = this.diceid * this.diceid + 5 % 32
+      return store.colorIndex[colorId].fontColor
+    },
+    backgroundColor () {
+      const colorId = this.diceid * this.diceid + 5 % 32
+      return store.colorIndex[colorId].backgroundColor
     },
     sides () {
       const nftid = store.ownedDice[this.diceid]
       if (store.diceTraits[nftid]) {
         return store.diceTraits[nftid].sides
       }
-    }
+    },
 
   }
 }
@@ -87,14 +93,12 @@ export default {
                         dur="0.75s"
                         animate="freeze"
                         repeatCount="indefinite"/>
-        <dten-generic-background v-if="background==1" />
-        <dten-generic-background v-if="background==2" />
-        <dten-generic-background v-if="background==3" />
-        <g v-if="font==0">
-          <dten-generic-numbers :value="displayValue()" />
+        <dten-generic-background :backgroundColor="backgroundColor" />
+        <g v-if="fontType == 0">
+          <dten-generic-numbers :fontColor="fontColor" :value="displayValue()" />
         </g>
-        <g v-if="font==1">
-          <dten-pixel-numbers :value="displayValue()" />
+        <g v-if="fontType == 1">
+          <dten-pixel-numbers :fontColor="fontColor" :value="displayValue()" />
         </g>
       </g>
     </g>

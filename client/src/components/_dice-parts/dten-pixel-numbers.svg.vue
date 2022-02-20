@@ -27,9 +27,9 @@ export default {
       type: Number,
       default: 1
     },
-    color: {
-      type: Number,
-      default: 1
+    fontColor: {
+      type: String,
+      default: '#ffffff'
     }
   },
   data () {
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <template>
-  <g fill="#ffffff" stroke="#ffffff">
+  <g :fill="fontColor" :stroke="fontColor" stroke-opacity="0.25">
     <dten-pixel-one v-if="value==1" />
     <dten-pixel-two v-if="value==2" />
     <dten-pixel-three v-if="value==3" />

@@ -8,7 +8,7 @@ export default {
   <g
      aria-label="2"
      id="text7922"
-     style="font-size:36.2615px;line-height:1.25;font-family:'8-bit Arcade In';-inkscape-font-specification:'8-bit Arcade In, Normal';fill:#ffffff;stroke-width:0.884038"
+     style="font-size:36.2615px;line-height:1.25;font-family:'8-bit Arcade In';-inkscape-font-specification:'8-bit Arcade In, Normal';stroke-width:0.884038"
      transform="translate(-38.755433,-160.39435)">
     <path
        id="path12502"
