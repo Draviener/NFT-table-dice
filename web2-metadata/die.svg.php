@@ -1,10 +1,33 @@
 <?php 
-  header('Content-type: image/svg+xml');
-  $backgroundColor='8b10d0';
-  $forgroundColor='66CC66';
-  $font=1;
-  $version='<?xml version="1.0" encoding="UTF-8"?>' ;
-  echo $version;
+
+header('Content-type: image/svg+xml');
+
+$urlParts = preg_split(".", getenv('SCRIPT_NAME')); 
+// /metadata/die.{size}.{background}.{foreground}.{font}.svg
+$pattern = "#/metadata/[\w]+\.(?P<sides>[\d]+)\.(?P<fgColor>[[:xdigit:]]{6})\.(?P<bgColor>[[:xdigit:]]{6})\.(?P<font>[\d]+)\.svg#";
+$matches = array();
+
+preg_match($pattern, getenv('SCRIPT_NAME'), $matches);
+
+// BUGFIX: There are currently only 2 fonts (0, 1), so we'll modulo the NFT font ids out of range.
+$FONT_COUNT = 2;
+if ((int) $matches['font'] > $FONT_COUNT - 1) {
+  $matches['font'] = (int) $matches['font'] % ($FONT_COUNT);
+}
+
+// Generate a default image if the params are invalid. Hence the default fallback values
+$sides = $matches['sides'] ?? 10;
+$backgroundColor = $matches['bgColor'] ?? '8b10d0';
+$foregroundColor = $matches['fgColor'] ?? '66CC66';
+$font = $matches['font'] ?? 1;
+
+// $backgroundColor='8b10d0';
+// $foregroundColor='66CC66';
+// $font=1;
+
+
+$version='<?xml version="1.0" encoding="UTF-8"?>' ;
+echo $version;
 ?>
 
 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -117,7 +140,7 @@
         </g>
 
         
-        <g fill="#<?php echo $forgroundColor ?>" stroke="<?php echo $forgroundColor ?>" stroke-opacity="0.25">
+        <g fill="#<?php echo $foregroundColor ?>" stroke="<?php echo $foregroundColor ?>" stroke-opacity="0.25">
           <?php if ($font == 0) : ?>
             <g transform="matrix(0.9742179,-0.22560913,-0.22560913,-0.9742179,3.096654,-4.6638324)" >
                 <path
