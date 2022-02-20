@@ -135,7 +135,6 @@ export const web3dice = {
       store.ownedDice  = []
       console.log("Error: ", error)
     }
-    store.diceLoaded = true
     return store.ownedDice
   }
   
