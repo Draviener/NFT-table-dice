@@ -7,8 +7,8 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
 
-import './DiceLibrary.sol';
-import './ERC721SimpleEnumerable.sol';
+import "./DiceLibrary.sol";
+import "./ERC721SimpleEnumerable.sol";
 
 contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
     using Counters for Counters.Counter;
@@ -17,9 +17,8 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
 
     Counters.Counter private _tokenIds;
     string private _baseURIvalue;
-    
-    constructor() ERC721("PolyDice: Dice Rolling Dapp", "PolyDice") {
-    }
+
+    constructor() ERC721("PolyDice: Dice Rolling Dapp", "PolyDice") {}
 
     function setBaseURI(string calldata baseURI) public onlyOwner {
         _baseURIvalue = baseURI;
@@ -29,12 +28,24 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
         return _baseURIvalue;
     }
 
-    function mintNFT(address owner, string memory name, uint8 sides) 
-        public onlyOwner returns (uint256) 
-    {
+    function mintNFT(
+        address owner,
+        string calldata name,
+        uint8 sides,
+        string calldata fgColor,
+        string calldata bgColor,
+        uint8 font
+    ) public onlyOwner returns (uint256) {
         // NOTE: Start at id #0
         uint256 newId = _tokenIds.current();
-        diceNFTs.createDice(name, newId, sides);
+        diceNFTs.createDice(
+            newId,
+            name,
+            sides,
+            fgColor,
+            bgColor,
+            font
+        );
         _safeMint(owner, newId);
         _tokenIds.increment();
 
@@ -44,21 +55,34 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
     function getOwnedTokenIds() public view returns (uint256[] memory) {
         uint256 ownedCnt = balanceOf(msg.sender);
         uint256[] memory tokenIds = new uint256[](ownedCnt);
-        for (uint i = 0; i < ownedCnt; i++) {
+        for (uint256 i = 0; i < ownedCnt; i++) {
             tokenIds[i] = tokenOfOwnerByIndex(msg.sender, i);
         }
         return tokenIds;
     }
 
     // TODO: Add new attributes
-    function getTraits(uint256 tokenId) view public
-        returns (string memory name, string memory tokenURI, uint8 sides) {
+    function getTraits(uint256 tokenId)
+        public
+        view
+        returns (
+            string memory name,
+            uint8 sides,
+            string memory fgColor,
+            string memory bgColor,
+            uint8 font
+        )
+    {
         return diceNFTs.getTraits(tokenId);
     }
 
-    function roll(uint256 tokenId, uint16 nonce) view public returns (uint8) {
-        require(msg.sender == ownerOf(tokenId), "Ah Ah Ah, you didn't say the magic word! (This isn't your NFT.)");
+    function roll(uint256 tokenId, uint16 nonce) public view returns (uint8) {
+        // FIXME:
+        // require(msg.sender == ownerOf(tokenId), "Ah Ah Ah, you didn't say the magic word! (This isn't your NFT.)");
         return diceNFTs.doRoll(tokenId, nonce);
     }
 
+    function getOwnerOf(uint256 tokenId) public view returns (address) {
+        return ownerOf(tokenId);
+    }
 }
