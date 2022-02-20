@@ -6,7 +6,7 @@ export const web3dice = {
   provider: null,  
   signer: null,
   diceContract: null,
-  diceContractAddress: '0xb4955C7784256C7C6A9f3EBaF164c1fa3e493611', //what will be the best way to populate this? A: (@excalq) the HH deploy task!
+  diceContractAddress: '0x9AC5Ce72dB012e19BBB7e9fb05cb614fA2d58938', //what will be the best way to populate this? A: (@excalq) the HH deploy task!
 
   async init() {
     try {
