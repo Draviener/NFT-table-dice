@@ -56,6 +56,30 @@ export default {
       const delta = Math.abs(this.ownedDiceIndex - n)
       const gradient = (delta * delta) / 40
       return Math.max(0, (1 - gradient))
+    },
+    quickadd() {
+      if (store.selectedDice[0] == this.ownedDiceIndex) {
+        return
+      }
+      if (store.selectedDice[1] == this.ownedDiceIndex) {
+        return
+      }
+      if (store.selectedDice[2] == this.ownedDiceIndex) {
+        return
+      }
+      if (store.selectedDice[1] == null) {
+        store.selectedDice[1] = this.ownedDiceIndex
+        return
+      }
+      if (store.selectedDice[0] == null) {
+        store.selectedDice[0] = this.ownedDiceIndex
+        return
+      }
+      if (store.selectedDice[2] == null) {
+        store.selectedDice[2] = this.ownedDiceIndex
+        return
+      }
+
     }
   },
   computed: {
@@ -136,6 +160,7 @@ export default {
         <die 
           transform="translate(0 90) scale(1.1)"
           :diceid="store.ownedDice[ownedDiceIndex]"
+          @click="quickadd()"
         />
       </g>
       <text transform="translate(0 220)" font-size="0.5em" fill="#666666">NFT: #{{ store.ownedDice[ownedDiceIndex] }}</text>

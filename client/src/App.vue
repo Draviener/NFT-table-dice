@@ -79,7 +79,7 @@ export default {
     <svg-container>
       <g fill="#ffffff"  text-anchor="middle" dominant-baseline="middle" font-size="1.75em">
 
-        <polydice-logo transform="scale(1.1) translate(-290 -490)" opacity="0.2" />
+        <polydice-logo transform="scale(1.1) translate(-290 -420)" opacity="0.2" />
         <polydice-icon transform="scale(4) translate(-190 -120)" opacity="0.01" />
 
         <g v-if="!store.web3.hasWallet">
@@ -110,7 +110,7 @@ export default {
         </g>
 
         <g v-else>
-          <g :transform="'translate(' + 280 + ' ' + -500 +')'" v-if="!menu">
+          <g :transform="'translate(' + 280 + ' ' + -420 +')'" v-if="!menu">
             <menu-icon @click="openMenu()" />
           </g>
 
