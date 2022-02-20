@@ -36,7 +36,7 @@ export const web3dice = {
     this.diceContract = new ethers.Contract(this.diceContractAddress, Dice.abi, this.provider)
 
     console.log ('Wallet provider found')
-    if (parseInt(store.web3.chain.chainId) == 4) { 
+    if (parseInt(store.web3.chain.chainId) == 80001) { 
       this.connect()
     }
   },
@@ -82,7 +82,7 @@ export const web3dice = {
           blockExplorerUrls: ['https://mumbai.polygonscan.com/']
         }]
         try {
-          await window.ethereum.currentProvider.request({
+          await window.ethereum.request({
             method: 'wallet_addEthereumChain',
             params: data
           });

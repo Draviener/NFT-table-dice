@@ -88,7 +88,7 @@ export default {
           <polygon-logo transform="scale(10) translate(0 40)" opacity="0.1" />
         </g>
 
-        <g v-else-if="!store.web3.isConnected">
+        <g v-else-if="!store.web3.isConnected || chainName != 'maticmum'">
           <polygon-logo transform="scale(10) translate(0 40)" opacity="0.1" />
           <text transform="translate(0 -50)">You are on the {{ chainName }} network.</text>
           <g v-if="chainName != 'maticmum'">
