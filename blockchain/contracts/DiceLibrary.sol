@@ -44,13 +44,13 @@ library DiceLibrary {
         return (self.dice[tokenId].name, getTokenURIpath(self, tokenId), self.dice[tokenId].sides);
     }
 
-    function random(uint256 nonce) private view returns(uint){
+    function random(uint16 nonce) private view returns(uint) {
         return uint(keccak256(abi.encode(block.difficulty, block.timestamp, msg.sender, nonce)));
     }
 
-    function doRoll(DiceStorage storage self, uint256 tokenId, uint256 nonce) public view returns (uint8) {
+    function doRoll(DiceStorage storage self, uint256 tokenId, uint16 nonce) public view returns (uint8) {
         // TODO: Is there a better/cheaper way to do !(bool) -> int
-        uint offset = (self.dice[tokenId].zeroBased) ? 0 : 1;
+        uint8 offset = (self.dice[tokenId].zeroBased) ? 0 : 1;
         uint8 result = uint8((random(nonce) % self.dice[tokenId].sides) + offset);
         return result;
     }

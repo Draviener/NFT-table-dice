@@ -56,7 +56,8 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
         return diceNFTs.getTraits(tokenId);
     }
 
-    function roll(uint256 tokenId, uint256 nonce) view public returns (uint8) {
+    function roll(uint256 tokenId, uint16 nonce) view public returns (uint8) {
+        require(msg.sender == ownerOf(tokenId), "Ah Ah Ah, you didn't say the magic word! (This isn't your NFT.)");
         return diceNFTs.doRoll(tokenId, nonce);
     }
 
