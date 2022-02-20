@@ -19,4 +19,6 @@ NFT Tabletop Dice were conceptualized as an Entry for EthDenver 2022.
 
 Works best in metamask.
 
-[![Alt text](https://img.youtube.com/vi/SUipc_FUhSE/0.jpg)](https://www.youtube.com/watch?v=SUipc_FUhSE)
+## Demo Video
+
+[![Watch on YouTube](https://img.youtube.com/vi/SUipc_FUhSE/0.jpg)](https://www.youtube.com/watch?v=SUipc_FUhSE)
