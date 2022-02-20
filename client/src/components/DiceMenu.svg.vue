@@ -125,7 +125,7 @@ export default {
           <g :transform="'translate('+ ((n * 20) - (ownedDiceIndex * 20)) +' 0)'">
             <die 
               v-if="n != ownedDiceIndex"
-              :transform="'translate(' + ((n - ownedDiceIndex) * 20) * getScaler(n) + ' ' + (getScaler(n) * 100)  + ') scale(' + getScaler(n)/3 + ')'"
+              :transform="'translate(' + ((n - ownedDiceIndex) * 40) * getScaler(n) + ' ' + (getScaler(n) * 100)  + ') scale(' + getScaler(n)/3 + ')'"
               :diceid="store.ownedDice[n]"
             />
           </g>
