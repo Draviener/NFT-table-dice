@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       rollingNumber: 1,
-      
+      store
     }
   },
   watch: {
@@ -62,11 +62,11 @@ export default {
       return typeId
     },
     fontColor () {
-      const colorId = this.diceid * this.diceid + 5 % 32
+      const colorId = this.diceid % 30
       return store.colorIndex[colorId].fontColor
     },
     backgroundColor () {
-      const colorId = this.diceid * this.diceid + 5 % 32
+      const colorId = this.diceid % 30
       return store.colorIndex[colorId].backgroundColor
     },
     sides () {
