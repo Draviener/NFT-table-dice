@@ -1,4 +1,4 @@
-![NFT Tabletop Dice](https://hackerlink.s3.amazonaws.com/static/files/NFT_Dice_Header4.png)
+![NFT Tabletop Dice](https://hackerlink.s3.amazonaws.com/static/files/PolyDice_Header.png)
 
 # PolyDice
 
