@@ -18,7 +18,7 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
     Counters.Counter private _tokenIds;
     string private _baseURIvalue;
     
-    constructor() ERC721 ("TabletopDiceNFT", "TabletopDice") {
+    constructor() ERC721 ("PolyDice: Dice Rolling Dapp", "PolyDice") {
     }
 
     function setBaseURI(string calldata baseURI) public onlyOwner {
