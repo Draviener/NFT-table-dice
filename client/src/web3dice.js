@@ -29,7 +29,6 @@ export const web3dice = {
       }
     })
     this.provider.on("block", (blockNumber) => {
-      console.log('block', blockNumber)
     })
 
     //todo - if we were going multichain, we would need to get the correct
@@ -54,9 +53,9 @@ export const web3dice = {
     
     this.signer.getAddress().then( address => {
       store.address = address
+      this.getOwnedDice()
+      store.web3.isConnected = true
     })
-    store.web3.isConnected = true
-    this.getOwnedDice()
     
   },
 
@@ -82,13 +81,10 @@ export const web3dice = {
 
   async roll(diceId) {
     store.isRolling[diceId] = true
-    console.log('rolling')
     try {
       const nonce = parseInt(new Date().getTime() % 512);
       const roll = await this.diceContract.roll(diceId, nonce)
       store.lastRoll[diceId] = roll
-      console.log('roll', roll)
-      //store.isRolling[diceId] = false
       setTimeout(() => {store.isRolling[diceId] = false}, 1000)
       return roll
     } catch (err) {
@@ -110,11 +106,8 @@ export const web3dice = {
   },
 
   async getOwnedDice() {
-    //const myDice = await this.diceContract.getOwnedTokenIds()
-    //console.log('my dice', myDice)
-    const owned = [1,2,1,2,1,2]
-    store.ownedDice = owned
+    store.ownedDice  = await this.diceContract.tokenListOfOwner(store.address)
     console.log('You have dice', store.ownedDice)
-    return owned
+    return store.ownedDice
   }
 }
