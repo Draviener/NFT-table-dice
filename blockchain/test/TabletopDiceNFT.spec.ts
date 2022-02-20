@@ -10,6 +10,9 @@ describe("TabletopDiceNFT", () => {
   let wallet: Wallet;
   let name = "Dungeon Master's D20";
   let sides = 20;
+  let fgColor = "0000ff";
+  let bgColor = "00134e";
+  let font = 1;
   let nonceFn = () => { return Math.floor(Math.random() * 100) };
 
   beforeEach(async () => {
@@ -18,7 +21,14 @@ describe("TabletopDiceNFT", () => {
   });
 
   async function mintNftDefault(): Promise<TransactionResponse> {
-    return deployedContract.mintNFT(wallet.address, name, sides);
+    return deployedContract.mintNFT(
+      wallet.address, 
+      name,
+      sides,
+      fgColor,
+      bgColor,
+      font
+    );
   }
 
   describe("mintNft", async () => {
@@ -30,7 +40,13 @@ describe("TabletopDiceNFT", () => {
 
     it("returns the new item ID", async () => {
       await expect(
-        await deployedContract.callStatic.mintNFT(wallet.address, name, sides)
+        await deployedContract.callStatic.mintNFT(
+          wallet.address,
+          name,
+          sides,
+          fgColor,
+          bgColor,
+          font)
       ).to.eq("0");
     });
 
@@ -58,8 +74,11 @@ describe("TabletopDiceNFT", () => {
     it("cannot mint to address zero", async () => {
       const TX = deployedContract.mintNFT(
         ethers.constants.AddressZero,
-        name, 
-        sides
+        name,
+        sides,
+        fgColor,
+        bgColor,
+        font
       );
       await expect(TX).to.be.revertedWith("ERC721: mint to the zero address");
     });
@@ -86,14 +105,28 @@ describe("TabletopDiceNFT", () => {
     it("Mints dice NFTs with attributes", async () => {
       let name = "der Würfel!";
       let sides = 10;
+      let font = 14;
+      let tokenURIexpected = 
+        `https://dice.partavate.com/metadata/${name}/${sides}/${fgColor}/${bgColor}/${font}`;
 
-      await deployedContract.mintNFT(wallet.address, name, sides);
+      await deployedContract.mintNFT(wallet.address, 
+        name,
+        sides,
+        fgColor,
+        bgColor,
+        font);
 
       // TODO: Get tokenId from emitted event:
       const tokenId = 0;
       let die = await deployedContract.getTraits(tokenId);
       expect(die.name).to.equal(name);
       expect(die.sides).to.equal(sides);
+      expect(die.fgColor).to.equal(fgColor);
+      expect(die.bgColor).to.equal(bgColor);
+      expect(die.font).to.equal(font);
+
+      console.log(await deployedContract.tokenURI(tokenId));
+      expect(await deployedContract.tokenURI(tokenId)).to.equal(tokenURIexpected);
     });
   });
 
@@ -123,7 +156,7 @@ describe("TabletopDiceNFT", () => {
       }
 
       it("10-side dice NFTs must roll with a result from 0-9", async () => {1
-        await deployedContract.mintNFT(wallet.address, "D10", 10);
+        await deployedContract.mintNFT(wallet.address, "D10", 10, fgColor, bgColor, font);
   
         let tokenId = 0;
         let numRolls = 10;
@@ -144,7 +177,14 @@ describe("TabletopDiceNFT", () => {
       
       // The first random NFTs will belong to someone else
       for (let i = 0; i < Math.random() * 30; i++) {
-        await deployedContract.mintNFT(otherAccount.address, "D20", 20);
+        await deployedContract.mintNFT(
+          otherAccount.address, 
+          "D20", 
+          20, 
+          fgColor, 
+          bgColor, 
+          font
+        );
       }
       // Now generate NFTs for our wallet address
       for (let i = 0; i < numMinted; i++) {

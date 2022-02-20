@@ -36,9 +36,11 @@ describe("tasks", () => {
 
       await run("mint-nft", { 
           owner: wallet.address,
-          name: "🎲",
+          name: "Le 🎲",
           sides: 10,
-          tokenUri: "https://partavate.com/token/nft-dice/" 
+          fgColor: "fffff",
+          bgColor: "00134e",
+          font: 1
         });
 
       // 3 Tx, each with logged messages (REMOVING console.log will break this!)
