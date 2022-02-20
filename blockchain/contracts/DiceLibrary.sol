@@ -8,9 +8,7 @@ library DiceLibrary {
     struct Dice {
         string name;
         uint8 sides;
-        // TODO: Store colors as bytes3, and translate to hex chars
-        string fgColor;
-        string bgColor;
+        uint8 styleId;
         uint8 font;
         bool zeroBased;
     }
@@ -19,8 +17,96 @@ library DiceLibrary {
         mapping(uint256 => Dice) dice;
     }
 
-    function getColorTheme(uint styleId) internal pure returns(
-        string memory background, string memory forground
+    function createDice(
+        DiceStorage storage self,
+        uint256 tokenId,
+        string calldata name,
+        uint8 sides,
+        uint8 styleId,
+        uint8 font
+    ) internal {
+        require(sides > 0, "Sides must be non-zero");
+
+        bool zeroBased = (sides == 10) ? true : false; // Only D10s have "0"
+        self.dice[tokenId] = Dice(
+            name,
+            sides,
+            styleId,
+            font,
+            zeroBased
+        );
+    }
+
+    // URI path is composed of attributes
+    function getTokenURIpath(DiceStorage storage self, uint256 tokenId)
+        internal
+        view
+        returns (string memory)
+    {
+        (string memory _fgColor, string memory _bgColor) = getColorTheme(self.dice[tokenId].styleId);
+
+        return(string(abi.encodePacked(
+            "/metadata",
+            "/", self.dice[tokenId].name,
+            "/", Strings.toString(self.dice[tokenId].sides),
+            "/", _fgColor,
+            "/", _bgColor,
+            "/", Strings.toString(self.dice[tokenId].font)
+        )));
+    }
+
+    function getTraits(DiceStorage storage self, uint256 tokenId)
+        public
+        view
+        returns (
+            string memory name,
+            uint8 sides,
+            string memory fgColor,
+            string memory bgColor,
+            uint8 font
+        )
+    {
+        (string memory _fgColor, string memory _bgColor) = getColorTheme(self.dice[tokenId].styleId);
+
+        return (
+            self.dice[tokenId].name,
+            self.dice[tokenId].sides,
+            _fgColor,
+            _bgColor,
+            self.dice[tokenId].font
+        );
+    }
+
+    function random(uint16 nonce) private view returns (uint256) {
+        return
+            uint256(
+                keccak256(
+                    abi.encode(
+                        block.difficulty,
+                        block.timestamp,
+                        msg.sender,
+                        nonce
+                    )
+                )
+            );
+    }
+
+    function doRoll(
+        DiceStorage storage self,
+        uint256 tokenId,
+        uint16 nonce
+    ) public view returns (uint8) {
+        // TODO: Is there a better/cheaper way to do !(bool) -> int
+        uint8 offset = (self.dice[tokenId].zeroBased) ? 0 : 1;
+        uint8 result = uint8(
+            (random(nonce) % self.dice[tokenId].sides) + offset
+        );
+        return result;
+    }
+
+    // Storing small indexed values allows much less data per minted token
+    function getColorTheme(uint8 styleId) internal pure returns(
+        string memory foreground, string memory background
     ) {
         require(styleId <= 30, "style out of range");
 
@@ -59,16 +145,16 @@ library DiceLibrary {
             (styleId == 8) ||
             (styleId == 17) ||
             (styleId == 26)) {
-            forground = '0000ff';
+            foreground = '0000ff';
         } else if ((styleId == 1) ||
             (styleId == 5)) {
-            forground = '00ff00';
+            foreground = '00ff00';
         } else if ((styleId == 2) ||
             (styleId == 6) ||
             (styleId == 10) ||
             (styleId == 19) ||
             (styleId == 28)) {
-            forground = 'ff0000';
+            foreground = 'ff0000';
         } else if ((styleId == 3) ||
             (styleId == 7) ||
             (styleId == 13) ||
@@ -78,109 +164,23 @@ library DiceLibrary {
             (styleId == 25) ||
             (styleId == 29) ||
             (styleId == 30)) {
-            forground = 'ffffff';
+            foreground = 'ffffff';
         } else if ((styleId == 9) ||
             (styleId == 11) ||
             (styleId == 14) ||
             (styleId == 18) ||
             (styleId == 20) ||
             (styleId == 27)) {
-            forground = '000000';
+            foreground = '000000';
         }  else if ((styleId == 12) ||
             (styleId == 22)) {
-            forground = '88ff88';
+            foreground = '88ff88';
         }  else if (styleId == 15) {
-            forground = '66cc66';
+            foreground = '66cc66';
         }  else if (styleId == 24) {
-            forground = '880000';
+            foreground = '880000';
         } 
 
-        return (background, forground);
-    }
-
-
-    function createDice(
-        DiceStorage storage self,
-        uint256 tokenId,
-        string calldata name,
-        uint8 sides,
-        string calldata fgColor,
-        string calldata bgColor,
-        uint8 font
-    ) internal {
-        require(sides > 0, "Sides must be non-zero");
-
-        bool zeroBased = (sides == 10) ? true : false; // Only D10s have "0"
-        self.dice[tokenId] = Dice(
-            name,
-            sides,
-            fgColor,
-            bgColor,
-            font,
-            zeroBased
-        );
-    }
-
-    // URI path is composed of attributes
-    function getTokenURIpath(DiceStorage storage self, uint256 tokenId)
-        internal
-        view
-        returns (string memory)
-    {
-        return(string(abi.encodePacked(
-            "/metadata",
-            "/", self.dice[tokenId].name,
-            "/", Strings.toString(self.dice[tokenId].sides),
-            "/", self.dice[tokenId].fgColor,
-            "/", self.dice[tokenId].bgColor,
-            "/", Strings.toString(self.dice[tokenId].font)
-        )));
-    }
-
-    function getTraits(DiceStorage storage self, uint256 tokenId)
-        public
-        view
-        returns (
-            string memory name,
-            uint8 sides,
-            string memory fgColor,
-            string memory bgColor,
-            uint8 font
-        )
-    {
-        return (
-            self.dice[tokenId].name,
-            self.dice[tokenId].sides,
-            self.dice[tokenId].fgColor,
-            self.dice[tokenId].bgColor,
-            self.dice[tokenId].font
-        );
-    }
-
-    function random(uint16 nonce) private view returns (uint256) {
-        return
-            uint256(
-                keccak256(
-                    abi.encode(
-                        block.difficulty,
-                        block.timestamp,
-                        msg.sender,
-                        nonce
-                    )
-                )
-            );
-    }
-
-    function doRoll(
-        DiceStorage storage self,
-        uint256 tokenId,
-        uint16 nonce
-    ) public view returns (uint8) {
-        // TODO: Is there a better/cheaper way to do !(bool) -> int
-        uint8 offset = (self.dice[tokenId].zeroBased) ? 0 : 1;
-        uint8 result = uint8(
-            (random(nonce) % self.dice[tokenId].sides) + offset
-        );
-        return result;
+        return (foreground, background);
     }
 }

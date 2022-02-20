@@ -30,29 +30,33 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
         return _baseURIvalue;
     }
 
-    function tokenURI(uint256 tokenId) public view override returns (string memory) {
-        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
-        return(string(abi.encodePacked(_baseURI(), diceLib.getTokenURIpath(tokenId))));
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        override
+        returns (string memory)
+    {
+        require(
+            _exists(tokenId),
+            "ERC721Metadata: URI query for nonexistent token"
+        );
+        return (
+            string(
+                abi.encodePacked(_baseURI(), diceLib.getTokenURIpath(tokenId))
+            )
+        );
     }
 
     function mintNFT(
         address owner,
         string calldata name,
         uint8 sides,
-        string calldata fgColor,
-        string calldata bgColor,
+        uint8 styleId,
         uint8 font
     ) public onlyOwner returns (uint256) {
         // NOTE: Start at id #0
         uint256 newId = _tokenIds.current();
-        diceLib.createDice(
-            newId,
-            name,
-            sides,
-            fgColor,
-            bgColor,
-            font
-        );
+        diceLib.createDice(newId, name, sides, styleId, font);
         _safeMint(owner, newId);
         _tokenIds.increment();
 
@@ -89,9 +93,9 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
         return diceLib.doRoll(tokenId, nonce);
     }
 
-    function getColorTheme(uint styleId) public pure returns(
-        string memory background, string memory forground
-    ) {
+    function getColorTheme(uint8 styleId) public pure
+        returns (string memory foreground, string memory background)
+    {
         return DiceLibrary.getColorTheme(styleId);
     }
 
