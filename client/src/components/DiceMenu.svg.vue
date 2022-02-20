@@ -33,11 +33,11 @@ export default {
     },
     add(id) {
       for(let i=0;i<3;i++) {
-        if (store.selectedDice[i] == store.ownedDice[this.ownedDiceIndex]) {
+        if (store.selectedDice[i] == this.ownedDiceIndex) {
           store.selectedDice[i] = null
         }
       }
-      store.selectedDice[id] = store.ownedDice[this.ownedDiceIndex]
+      store.selectedDice[id] = this.ownedDiceIndex
     },
     remove(id) {
       store.selectedDice[id] = null
@@ -150,7 +150,7 @@ export default {
             <die 
               v-if="n != ownedDiceIndex"
               :transform="'translate(' + ((n - ownedDiceIndex) * 40) * getScaler(n) + ' ' + (getScaler(n) * 100)  + ') scale(' + getScaler(n)/3 + ')'"
-              :diceid="store.ownedDice[n]"
+              :diceid="n"
             />
           </g>
         </g>
@@ -159,7 +159,7 @@ export default {
       <g transform="translate(0 10)">
         <die 
           transform="translate(0 90) scale(1.1)"
-          :diceid="store.ownedDice[ownedDiceIndex]"
+          :diceid="ownedDiceIndex"
           @click="quickadd()"
         />
       </g>
