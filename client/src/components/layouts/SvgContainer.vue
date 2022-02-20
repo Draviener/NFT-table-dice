@@ -2,7 +2,7 @@
 export default {
   data () {
     return {
-      height: 1200,
+      height: 1024,
       width: 768
     }
   }

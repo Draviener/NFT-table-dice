@@ -118,6 +118,7 @@ export const web3dice = {
       store.ownedDice.forEach(async (diceId, index) => {
         store.diceTraits[index] = await this.diceContract.getTraits(diceId)
         console.log(store.diceTraits[index])
+        console.log(index)
       }, this)
     } catch (error) {
       console.log("Error: ", error)

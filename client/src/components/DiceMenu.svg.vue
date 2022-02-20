@@ -33,11 +33,11 @@ export default {
     },
     add(id) {
       for(let i=0;i<3;i++) {
-        if (store.selectedDice[i] == store.ownedDice[this.ownedDiceIndex]) {
+        if (store.selectedDice[i] == this.ownedDiceIndex) {
           store.selectedDice[i] = null
         }
       }
-      store.selectedDice[id] = store.ownedDice[this.ownedDiceIndex]
+      store.selectedDice[id] = this.ownedDiceIndex
     },
     remove(id) {
       store.selectedDice[id] = null
@@ -56,6 +56,30 @@ export default {
       const delta = Math.abs(this.ownedDiceIndex - n)
       const gradient = (delta * delta) / 40
       return Math.max(0, (1 - gradient))
+    },
+    quickadd() {
+      if (store.selectedDice[0] == this.ownedDiceIndex) {
+        return
+      }
+      if (store.selectedDice[1] == this.ownedDiceIndex) {
+        return
+      }
+      if (store.selectedDice[2] == this.ownedDiceIndex) {
+        return
+      }
+      if (store.selectedDice[1] == null) {
+        store.selectedDice[1] = this.ownedDiceIndex
+        return
+      }
+      if (store.selectedDice[0] == null) {
+        store.selectedDice[0] = this.ownedDiceIndex
+        return
+      }
+      if (store.selectedDice[2] == null) {
+        store.selectedDice[2] = this.ownedDiceIndex
+        return
+      }
+
     }
   },
   computed: {
@@ -126,7 +150,7 @@ export default {
             <die 
               v-if="n != ownedDiceIndex"
               :transform="'translate(' + ((n - ownedDiceIndex) * 40) * getScaler(n) + ' ' + (getScaler(n) * 100)  + ') scale(' + getScaler(n)/3 + ')'"
-              :diceid="store.ownedDice[n]"
+              :diceid="n"
             />
           </g>
         </g>
@@ -135,7 +159,8 @@ export default {
       <g transform="translate(0 10)">
         <die 
           transform="translate(0 90) scale(1.1)"
-          :diceid="store.ownedDice[ownedDiceIndex]"
+          :diceid="ownedDiceIndex"
+          @click="quickadd()"
         />
       </g>
       <text transform="translate(0 220)" font-size="0.5em" fill="#666666">NFT: #{{ store.ownedDice[ownedDiceIndex] }}</text>
