@@ -10,8 +10,9 @@ describe("TabletopDiceNFT", () => {
   let wallet: Wallet;
   let name = "Dungeon Master's D20";
   let sides = 20;
-  let fgColor = "0000ff";
-  let bgColor = "00134e";
+  let fgColor = "000000";
+  let bgColor = "555753";
+  let styleId = 11;
   let font = 1;
   let nonceFn = () => { return Math.floor(Math.random() * 100) };
 
@@ -25,8 +26,7 @@ describe("TabletopDiceNFT", () => {
       wallet.address, 
       name,
       sides,
-      fgColor,
-      bgColor,
+      styleId,
       font
     );
   }
@@ -44,8 +44,7 @@ describe("TabletopDiceNFT", () => {
           wallet.address,
           name,
           sides,
-          fgColor,
-          bgColor,
+          styleId,
           font)
       ).to.eq("0");
     });
@@ -76,30 +75,21 @@ describe("TabletopDiceNFT", () => {
         ethers.constants.AddressZero,
         name,
         sides,
-        fgColor,
-        bgColor,
+        styleId,
         font
       );
       await expect(TX).to.be.revertedWith("ERC721: mint to the zero address");
     });
-    it("cannot mint to address zero", async () => {
-      const TX = deployedContract.mintNFT(
-        ethers.constants.AddressZero,
-        name, 
-        sides
-      );
-      await expect(TX).to.be.revertedWith("ERC721: mint to the zero address");
-    });
 
-    it("Give color themes", async () => {
+    it("translates styleId to color themes", async () => {
       let key = 0;
       let theme = await deployedContract.getColorTheme(key);
+      expect(theme.foreground).to.equal('0000ff');
       expect(theme.background).to.equal('00134e');
-      expect(theme.forground).to.equal('0000ff');
       key = 30;
       theme = await deployedContract.getColorTheme(key);
+      expect(theme.foreground).to.equal('ffffff');
       expect(theme.background).to.equal('0000ff');
-      expect(theme.forground).to.equal('ffffff');
     });
 
     it("Mints dice NFTs with attributes", async () => {
@@ -112,8 +102,7 @@ describe("TabletopDiceNFT", () => {
       await deployedContract.mintNFT(wallet.address, 
         name,
         sides,
-        fgColor,
-        bgColor,
+        styleId,
         font);
 
       // TODO: Get tokenId from emitted event:
@@ -121,8 +110,8 @@ describe("TabletopDiceNFT", () => {
       let die = await deployedContract.getTraits(tokenId);
       expect(die.name).to.equal(name);
       expect(die.sides).to.equal(sides);
-      expect(die.fgColor).to.equal(fgColor);
-      expect(die.bgColor).to.equal(bgColor);
+      expect(die.fgColor).to.equal("000000");
+      expect(die.bgColor).to.equal("555753");
       expect(die.font).to.equal(font);
 
       console.log(await deployedContract.tokenURI(tokenId));
@@ -156,7 +145,7 @@ describe("TabletopDiceNFT", () => {
       }
 
       it("10-side dice NFTs must roll with a result from 0-9", async () => {1
-        await deployedContract.mintNFT(wallet.address, "D10", 10, fgColor, bgColor, font);
+        await deployedContract.mintNFT(wallet.address, "D10", 10, styleId, font);
   
         let tokenId = 0;
         let numRolls = 10;
@@ -179,10 +168,9 @@ describe("TabletopDiceNFT", () => {
       for (let i = 0; i < Math.random() * 30; i++) {
         await deployedContract.mintNFT(
           otherAccount.address, 
-          "D20", 
+          "D20",
           20, 
-          fgColor, 
-          bgColor, 
+          styleId,
           font
         );
       }

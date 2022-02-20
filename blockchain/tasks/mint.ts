@@ -9,8 +9,7 @@ task("mint-nft", "Mint Dice NFTs")
   .addParam("owner", "Who will own the NFT", env("ETH_PUBLIC_KEY"), types.string)
   .addParam("name", "The Name of the Die NFT", "🎲", types.string)
   .addParam("sides", "The Number of Faces", 10, types.int)
-  .addParam("fgColor", "The Font Color in hex chars", "ffffff", types.string)
-  .addParam("bgColor", "The Background Color in hex chars", "00134e", types.string)
+  .addParam("styleId", "The Style Number (0-30)", 0, types.int)
   .addParam("font", "The Font Id", 1, types.int)
   .setAction(async (taskArgs, hre) => {
     return getContract("TabletopDiceNFT", hre)
@@ -19,8 +18,7 @@ task("mint-nft", "Mint Dice NFTs")
           taskArgs.owner,
           taskArgs.name,
           taskArgs.sides, 
-          taskArgs.fgColor,
-          taskArgs.bgColor,
+          taskArgs.styleId,
           taskArgs.font,
           { gasLimit: 500_000 }
         );
