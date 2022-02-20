@@ -25,8 +25,7 @@ export default {
       window.open(url, '_blank')
     },
     explorer() {
-      //"https://mumbai.polygonscan.com/address/"
-      const url = "https://rinkeby.etherscan.io/address/"+web3dice.diceContractAddress
+      const url = "https://mumbai.polygonscan.com/address/"+web3dice.diceContractAddress
       window.open(url, '_blank')
     },
     close() {
@@ -47,15 +46,11 @@ export default {
       if (this.isMoreLeft) {
         this.ownedDiceIndex--
       }
-      console.log('new index', this.ownedDiceIndex)
-      console.log('total owned', store.ownedDice.length)
     },
     goRight() {
       if (this.isMoreRight) {
         this.ownedDiceIndex++
       }
-      console.log('new index', this.ownedDiceIndex)
-      console.log('total owned', store.ownedDice.length)
     },
     getScaler(n) {
       const delta = Math.abs(this.ownedDiceIndex - n)
@@ -87,6 +82,26 @@ export default {
         return true
       }
       return false
+    },
+    boxOneOpacity() {
+      if (this.ownedDiceIndex == store.selectedDice[0]) {
+        return 0.6
+      }
+      return 0.2
+    },
+    boxTwoOpacity() {
+      if (this.ownedDiceIndex == store.selectedDice[1]) {
+        return 0.6
+      }
+      return 0.2
+      
+    },
+    boxThreeOpacity() {
+      if (this.ownedDiceIndex == store.selectedDice[2]) {
+        return 0.6
+      }
+      return 0.2
+      
     }
   }  
 }
@@ -143,9 +158,9 @@ export default {
 
     <g transform="translate(0 50)" v-if="haveDice">
 
-    <rect x="-300" y="0" width="180" height="180" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" rx="25" ry="25" />      
-    <rect x="-90" y="0" width="180" height="180" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" rx="25" ry="25" />      
-    <rect x="120" y="0" width="180" height="180" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" rx="25" ry="25" />      
+    <rect x="-300" y="0" width="180" height="180" fill="none" stroke="#ffffff" :stroke-opacity="boxOneOpacity" stroke-width="2" rx="25" ry="25" />      
+    <rect x="-90" y="0" width="180" height="180" fill="none" stroke="#ffffff" :stroke-opacity="boxTwoOpacity" stroke-width="2" rx="25" ry="25" />      
+    <rect x="120" y="0" width="180" height="180" fill="none" stroke="#ffffff" :stroke-opacity="boxThreeOpacity" stroke-width="2" rx="25" ry="25" />      
       <die 
         v-if="store.selectedDice[0] != null"
         transform="translate(-210 90) scale(0.6)"

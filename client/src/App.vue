@@ -90,7 +90,7 @@ export default {
         </g>
 
         <g v-else>
-          <g :transform="'translate(' + 300 + ' ' + -430 +')'">
+          <g :transform="'translate(' + 250 + ' ' + -500 +')'">
             <menu-icon @click="openMenu()" />
           </g>
 
