@@ -82,6 +82,25 @@ describe("TabletopDiceNFT", () => {
       );
       await expect(TX).to.be.revertedWith("ERC721: mint to the zero address");
     });
+    it("cannot mint to address zero", async () => {
+      const TX = deployedContract.mintNFT(
+        ethers.constants.AddressZero,
+        name, 
+        sides
+      );
+      await expect(TX).to.be.revertedWith("ERC721: mint to the zero address");
+    });
+
+    it("Give color themes", async () => {
+      let key = 0;
+      let theme = await deployedContract.getColorTheme(key);
+      expect(theme.background).to.equal('00134e');
+      expect(theme.forground).to.equal('0000ff');
+      key = 30;
+      theme = await deployedContract.getColorTheme(key);
+      expect(theme.background).to.equal('0000ff');
+      expect(theme.forground).to.equal('ffffff');
+    });
 
     it("Mints dice NFTs with attributes", async () => {
       let name = "der Würfel!";
