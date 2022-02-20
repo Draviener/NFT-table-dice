@@ -2,6 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 library DiceLibrary {
     struct Dice {
@@ -46,9 +47,14 @@ library DiceLibrary {
         view
         returns (string memory)
     {
-        // TODO: add other dice attributes in later commit
-        // return(string(abi.encodePacked("/", self.dice[tokenId].sides,"/", self.dice[tokenId].sides)));
-        return "/sides/color/font";
+        return(string(abi.encodePacked(
+            "/metadata",
+            "/", self.dice[tokenId].name,
+            "/", Strings.toString(self.dice[tokenId].sides),
+            "/", self.dice[tokenId].fgColor,
+            "/", self.dice[tokenId].bgColor,
+            "/", Strings.toString(self.dice[tokenId].font)
+        )));
     }
 
     function getTraits(DiceStorage storage self, uint256 tokenId)

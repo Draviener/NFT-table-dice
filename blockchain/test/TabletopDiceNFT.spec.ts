@@ -87,6 +87,8 @@ describe("TabletopDiceNFT", () => {
       let name = "der Würfel!";
       let sides = 10;
       let font = 14;
+      let tokenURIexpected = 
+        `https://dice.partavate.com/metadata/${name}/${sides}/${fgColor}/${bgColor}/${font}`;
 
       await deployedContract.mintNFT(wallet.address, 
         name,
@@ -103,6 +105,9 @@ describe("TabletopDiceNFT", () => {
       expect(die.fgColor).to.equal(fgColor);
       expect(die.bgColor).to.equal(bgColor);
       expect(die.font).to.equal(font);
+
+      console.log(await deployedContract.tokenURI(tokenId));
+      expect(await deployedContract.tokenURI(tokenId)).to.equal(tokenURIexpected);
     });
   });
 

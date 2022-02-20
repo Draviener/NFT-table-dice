@@ -13,12 +13,14 @@ import "./ERC721SimpleEnumerable.sol";
 contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
     using Counters for Counters.Counter;
     using DiceLibrary for DiceLibrary.DiceStorage;
-    DiceLibrary.DiceStorage diceNFTs;
+    DiceLibrary.DiceStorage diceLib;
 
     Counters.Counter private _tokenIds;
     string private _baseURIvalue;
 
-    constructor() ERC721("PolyDice: Dice Rolling Dapp", "PolyDice") {}
+    constructor() ERC721("PolyDice: Dice Rolling Dapp", "PolyDice") {
+        _baseURIvalue = "https://dice.partavate.com";
+    }
 
     function setBaseURI(string calldata baseURI) public onlyOwner {
         _baseURIvalue = baseURI;
@@ -26,6 +28,11 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
 
     function _baseURI() internal view override returns (string memory) {
         return _baseURIvalue;
+    }
+
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+        return(string(abi.encodePacked(_baseURI(), diceLib.getTokenURIpath(tokenId))));
     }
 
     function mintNFT(
@@ -38,7 +45,7 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
     ) public onlyOwner returns (uint256) {
         // NOTE: Start at id #0
         uint256 newId = _tokenIds.current();
-        diceNFTs.createDice(
+        diceLib.createDice(
             newId,
             name,
             sides,
@@ -73,13 +80,13 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
             uint8 font
         )
     {
-        return diceNFTs.getTraits(tokenId);
+        return diceLib.getTraits(tokenId);
     }
 
     function roll(uint256 tokenId, uint16 nonce) public view returns (uint8) {
         // FIXME:
         // require(msg.sender == ownerOf(tokenId), "Ah Ah Ah, you didn't say the magic word! (This isn't your NFT.)");
-        return diceNFTs.doRoll(tokenId, nonce);
+        return diceLib.doRoll(tokenId, nonce);
     }
 
     function getOwnerOf(uint256 tokenId) public view returns (address) {
