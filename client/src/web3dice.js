@@ -76,7 +76,6 @@ export const web3dice = {
 
   async delayedRoll(diceId) {
     let rollDelay = Math.floor(Math.random() * 100)
-    console.log('delay', rollDelay)
     setTimeout(() => {this.roll(diceId)}, rollDelay)
   },
 
@@ -95,20 +94,21 @@ export const web3dice = {
     }
   },
 
-  async getTraits(diceId) {
+  async getTraits() {
     try {
-      const traits = await this.diceContract.getTraits(diceId)
-      store.diceTraits[diceId] = traits
-      return traits
+      store.ownedDice.forEach(async (diceId, index) => {
+        store.diceTraits[diceId] = await this.diceContract.getTraits(diceId)
+        console.log(store.diceTraits[diceId])
+      })
     } catch (err) {
       console.log("Error: ", err)
-      return 'failed'
     }
   },
 
   async getOwnedDice() {
     store.ownedDice  = await this.diceContract.tokenListOfOwner(store.address)
-    console.log('You have dice', store.ownedDice)
+    await this.getTraits()
+    store.diceLoaded = true
     return store.ownedDice
   }
 }

@@ -1,6 +1,7 @@
 <script setup>
-import DtenGenericBackground from './_dice-parts/dten-generic-background.svg.vue'
+import DtenGenericBackground from './_dice-parts/background/dten-generic-background.svg.vue'
 import DtenGenericNumbers from './_dice-parts/dten-generic-numbers.svg.vue'
+import DtenPixelNumbers from './_dice-parts/dten-pixel-numbers.svg.vue'
 </script>
 <script>
 import { onMounted } from 'vue'
@@ -51,19 +52,22 @@ export default {
       if (store.lastRoll[this.diceid]) {
         return parseInt(store.lastRoll[this.diceid])
       }
-      return 1     
+      return (this.diceid % this.sides + 1)
     },
     background () {
       return 1
     },
     font () {
-      return 1
+      return this.diceid % 2
     },
     color () {
       return 1
     },
     sides () {
-      return 20
+      const nftid = store.ownedDice[this.diceid]
+      if (store.diceTraits[nftid]) {
+        return store.diceTraits[nftid].sides
+      }
     }
 
   }
@@ -86,8 +90,11 @@ export default {
         <dten-generic-background v-if="background==1" />
         <dten-generic-background v-if="background==2" />
         <dten-generic-background v-if="background==3" />
-        <g v-if="font==1">
+        <g v-if="font==0">
           <dten-generic-numbers :value="displayValue()" />
+        </g>
+        <g v-if="font==1">
+          <dten-pixel-numbers :value="displayValue()" />
         </g>
       </g>
     </g>
