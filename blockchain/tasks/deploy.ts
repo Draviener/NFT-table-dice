@@ -29,12 +29,12 @@ task("deploy-all-contracts", "Deploy NFT contract").setAction(async (_, hre) => 
     });
 });
 
-// Deploys only the outer Dice.sol, persisting the ownership storage
+// Deploys only the outer Dice.sol. // TODO: Actually persist owner storage
 task("deploy", "Deploy NFT contract").setAction(async (_, hre) => {
   return hre.ethers
     .getContractFactory("TabletopDiceNFT", {
       libraries: {
-          "DiceLibrary": "NEW_LIBRARY_ADDRESS",
+          "DiceLibrary": "0x2B7F80C11293eA8AACb5Ed39a28246523284bB7B",
       }})
     .then((contractFactory) => contractFactory.deploy())
     .then((result) => {
