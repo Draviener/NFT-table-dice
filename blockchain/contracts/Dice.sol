@@ -31,20 +31,9 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
     }
 
     function tokenURI(uint256 tokenId)
-        public
-        view
-        override
-        returns (string memory)
-    {
-        require(
-            _exists(tokenId),
-            "ERC721Metadata: URI query for nonexistent token"
-        );
-        return (
-            string(
-                abi.encodePacked(_baseURI(), diceLib.getTokenURIpath(tokenId))
-            )
-        );
+        public view override returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+        return (string(abi.encodePacked(_baseURI(), diceLib.getTokenURIpath(tokenId))));
     }
 
     function mintNFT(
@@ -74,9 +63,7 @@ contract TabletopDiceNFT is Ownable, ERC721SimpleEnumerable {
 
     // TODO: Add new attributes
     function getTraits(uint256 tokenId)
-        public
-        view
-        returns (
+        public view returns (
             string memory name,
             uint8 sides,
             string memory fgColor,
