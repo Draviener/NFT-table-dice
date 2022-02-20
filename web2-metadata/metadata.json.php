@@ -13,7 +13,10 @@ if (count($urlParts) < 7 || $urlParts[1] != 'metadata')
     echo json_encode($error, JSON_PRETTY_PRINT);
 } 
 else 
-{
+{ 
+    $colorLabel = ($colorMap['foregrounds']['#'.$urlParts[4]] . $colorMap['backgrounds']['#'.$urlParts[5]]);
+    $fontLabel = ($urlParts[6] == 0) ? 'Occidental' : '8-Bit';
+
     $metadata = [
         "name" => $urlParts[2],
         "description" => "PolyDice: Dice for Tabletop Gaming, an EthDenver 2022 #BUIDLthon Entry",
@@ -22,12 +25,10 @@ else
         "image" => "https://dice.partavate.com/metadata/die.$urlParts[3].$urlParts[4].$urlParts[5].$urlParts[6].svg",
         "attributes" => [
             "Sides" => $urlParts[3],
-            "Font Color" => $urlParts[4],
-            "Dice Color" => $urlParts[5],
-            "font" => $urlParts[6]
+            "Dice Color" => $colorLabel,
+            "font" => $fontLabel
         ], 
     ];
 
     echo json_encode($metadata, JSON_PRETTY_PRINT);
 }
-
