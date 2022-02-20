@@ -1,6 +1,8 @@
 <script setup>
 import SvgContainer from './components/layouts/SvgContainer.vue'
 import MenuIcon from './components/_menu-icon.svg.vue'
+import PolydiceLogo from './components/polydice-logo.svg.vue'
+import PolydiceIcon from './components/polydice-icon.svg.vue'
 import PolygonLogo from './components/_polygon-logo.svg.vue'
 import Die from './components/_die.svg.vue'
 import DiceMenu from './components/DiceMenu.svg.vue'
@@ -77,6 +79,8 @@ export default {
     <svg-container>
       <g fill="#ffffff"  text-anchor="middle" dominant-baseline="middle" font-size="1.75em">
 
+        <polydice-logo transform="scale(1.1) translate(-290 -490)" opacity="0.2" />
+        <polydice-icon transform="scale(4) translate(-190 -120)" opacity="0.01" />
 
         <g v-if="!store.web3.hasWallet">
           <text transform="translate(0 -50)">I called out looking for your Web3 wallet provider;</text>
@@ -109,7 +113,7 @@ export default {
               <text>Loading dice...</text>
         </g>
         <g v-else>
-          <g :transform="'translate(' + 250 + ' ' + -500 +')'" v-if="!menu">
+          <g :transform="'translate(' + 280 + ' ' + -500 +')'" v-if="!menu">
             <menu-icon @click="openMenu()" />
           </g>
 
