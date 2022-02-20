@@ -1,6 +1,7 @@
 <script setup>
 import SvgContainer from './components/layouts/SvgContainer.vue'
 import MenuIcon from './components/_menu-icon.svg.vue'
+import PolygonLogo from './components/_polygon-logo.svg.vue'
 import Die from './components/_die.svg.vue'
 import DiceMenu from './components/DiceMenu.svg.vue'
 import { web3dice } from './web3dice.js'
@@ -23,6 +24,18 @@ export default {
         return store.web3.chain.name
       }      
       return 'no chain found'
+    },
+    diceSelected() {
+      if(store.selectedDice[0] != null) {
+        return true
+      }
+      if(store.selectedDice[1] != null) {
+        return true
+      }
+      if(store.selectedDice[2] != null) {
+        return true
+      }
+      return false
     }
   },
   methods: {
@@ -36,7 +49,7 @@ export default {
       this.menu = false
     },
     async roll() {
-      if (!store.diceSelected()) {
+      if (!this.diceSelected) {
         this.menu = true
       } else {
         //let traits = await web3dice.getTraits(diceId)
@@ -64,12 +77,15 @@ export default {
     <svg-container>
       <g fill="#ffffff"  text-anchor="middle" dominant-baseline="middle" font-size="1.75em">
 
+
         <g v-if="!store.web3.hasWallet">
           <text transform="translate(0 -50)">I called out looking for your Web3 wallet provider;</text>
           <text>but alas, I heard only silence.</text>
+          <polygon-logo transform="scale(10) translate(0 40)" opacity="0.1" />
         </g>
 
         <g v-else-if="!store.web3.isConnected">
+          <polygon-logo transform="scale(10) translate(0 40)" opacity="0.1" />
           <text transform="translate(0 -50)">You are on the {{ chainName }} network.</text>
           <g v-if="chainName != 'maticmum'">
             <text>Please switch to Polygon Mumbai</text>
@@ -93,30 +109,32 @@ export default {
               <text>Loading dice...</text>
         </g>
         <g v-else>
-          <g :transform="'translate(' + 250 + ' ' + -500 +')'">
+          <g :transform="'translate(' + 250 + ' ' + -500 +')'" v-if="!menu">
             <menu-icon @click="openMenu()" />
           </g>
+
 
           <dice-menu :show="menu" />    
 
           <g transform="translate(0 150)">
             <die 
               v-if="store.selectedDice[0] != null"
-              transform="translate(-140 -10)"
+              transform="translate(-150 -10) scale(1.2)"
               :diceid="store.selectedDice[0]"
             />
             <die 
               v-if="store.selectedDice[1] != null"
-              transform="translate(0 10)"
+              transform="translate(0 10) scale(1.2)"
               :diceid="store.selectedDice[1]"
             />
             <die 
               v-if="store.selectedDice[2] != null"
-              transform="translate(140 -10)"
+              transform="translate(150 -10) scale(1.2)"
               :diceid="store.selectedDice[2]"
             />
-            <text v-if="!store.diceSelected()">Select Your Dice</text>
-            <rect x="-300" y="-100" width="600" height="200" fill="#000000" stroke="#ffffff" fill-opacity="0" stroke-width="0" class="can-click" @click="roll()" />
+            <rect v-if="!diceSelected" x="-200" y="-50" width="400" height="100" fill="#000000" stroke="#ffffff" stroke-opacity="0.2" fill-opacity="0.2" rx="10" ry="10" class="can-click" @click="roll()" />
+            <text v-if="!diceSelected">Select Dice</text>
+            <rect x="-300" y="-100" width="600" height="200" fill="#000000" stroke="#ffffff" stroke-opacity="0.0" fill-opacity="0.0" class="can-click" @click="roll()" />
           </g>
           <rect v-if="menu" x="-2000" y="-2000" width="4000" height="4000" fill="#000000" opacity="0.4" @click="closeMenu" />
           <dice-menu :show="menu" @close="closeMenu()" />        
