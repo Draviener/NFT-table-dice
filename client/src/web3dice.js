@@ -95,8 +95,8 @@ export const web3dice = {
 
   async getTraits() {
     try {
-      store.ownedDice.forEach(async (diceId) => {
-        store.diceTraits[diceId]  = await this.diceContract.getTraits(diceId)
+      store.ownedDice.forEach(async (diceId, index) => {
+        store.diceTraits[diceId] = await this.diceContract.getTraits(diceId)
         console.log(store.diceTraits[diceId])
       })
     } catch (err) {
@@ -106,7 +106,8 @@ export const web3dice = {
 
   async getOwnedDice() {
     store.ownedDice  = await this.diceContract.tokenListOfOwner(store.address)
-    this.getTraits()
+    await this.getTraits()
+    store.diceLoaded = true
     return store.ownedDice
   }
 }

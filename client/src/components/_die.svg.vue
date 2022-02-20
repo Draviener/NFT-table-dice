@@ -64,7 +64,10 @@ export default {
       return 1
     },
     sides () {
-      return store.diceTraits[store.ownedDice[this.diceid]].sides
+      const nftid = store.ownedDice[this.diceid]
+      if (store.diceTraits[nftid]) {
+        return store.diceTraits[nftid].sides
+      }
     }
 
   }
