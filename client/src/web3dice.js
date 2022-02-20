@@ -29,8 +29,6 @@ export const web3dice = {
           window.location.reload()
       }
     })
-    this.provider.on("block", (blockNumber) => {
-    })
 
     //todo - if we were going multichain, we would need to get the correct
     //address for the contract based on which network is currently active
@@ -56,7 +54,7 @@ export const web3dice = {
       store.address = address
       this.getOwnedDice()
       store.web3.isConnected = true
-    })
+    }, this)
     
   },
 
@@ -118,9 +116,9 @@ export const web3dice = {
   async getTraits() {
     try {
       store.ownedDice.forEach(async (diceId, index) => {
-        store.diceTraits[diceId] = await this.diceContract.getTraits(diceId)
-        console.log(store.diceTraits[diceId])
-      })
+        store.diceTraits[index] = await this.diceContract.getTraits(diceId)
+        console.log(store.diceTraits[index])
+      }, this)
     } catch (error) {
       console.log("Error: ", error)
     }
@@ -135,7 +133,6 @@ export const web3dice = {
       store.ownedDice  = []
       console.log("Error: ", error)
     }
-    return store.ownedDice
   }
   
 }

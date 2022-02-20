@@ -121,7 +121,7 @@ export default {
     <g transform="translate(0 -290)" v-if="haveDice">
 
       <g stroke-width="4" stroke="#ffffff" transform="translate(0 -100)">
-        <g v-for="(id, n) in store.ownedDice">
+        <g v-for="(id, n) in store.ownedDice" :key="'k' + id + n">
           <g :transform="'translate('+ ((n * 20) - (ownedDiceIndex * 20)) +' 0)'">
             <die 
               v-if="n != ownedDiceIndex"

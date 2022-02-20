@@ -20,6 +20,7 @@ import DtenGenericEighteen from './numbers/generic/dten-generic-eighteen.svg.vue
 import DtenGenericNineteen from './numbers/generic/dten-generic-nineteen.svg.vue'
 import DtenGenericTwenty from './numbers/generic/dten-generic-twenty.svg.vue'
 </script>
+
 <script>
 export default {
   props: {
