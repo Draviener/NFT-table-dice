@@ -105,10 +105,16 @@ export const web3dice = {
     }
   },
 
+
   async getOwnedDice() {
-    store.ownedDice  = await this.diceContract.tokenListOfOwner(store.address)
-    await this.getTraits()
+    try {
+      store.ownedDice  = await this.diceContract.tokenListOfOwner(store.address)
+      await this.getTraits()
+    } catch (e) {
+      console.log("Error: ", err)
+    }
     store.diceLoaded = true
     return store.ownedDice
   }
+  
 }
