@@ -34,7 +34,7 @@ task("deploy", "Deploy NFT contract").setAction(async (_, hre) => {
   return hre.ethers
     .getContractFactory("TabletopDiceNFT", {
       libraries: {
-          "DiceLibrary": "0xb7094623C8453883783Df6C308FADe55448baACe",
+          "DiceLibrary": "0x73668aF7cC654634cc4EE81da6938416Eb45F4f6",
       }})
     .then((contractFactory) => contractFactory.deploy())
     .then((result) => {
