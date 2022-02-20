@@ -220,7 +220,7 @@ export default {
       <g transform="translate(-200 0)">
         <rect x="-80" y="-20" width="160" height="40" fill="#4444ff" fill-opacity="0.5" stroke="#4444ff" stroke-opacity="0.2" stroke-width="2" rx="15" ry="15" />      
         <text font-size="0.6em">Shop For Dice</text>
-        <rect x="-80" y="-20" width="160" height="40" fill="#ffffff" fill-opacity="0" stroke="#ffffff"  stroke-width="0" @click="shopOpenSea" class="can-click" />      
+        <rect x="-80" y="-20" width="160" height="40" fill="#ffffff" fill-opacity="0" stroke="#ffffff"  stroke-width="0" @click="shop" class="can-click" />      
       </g>
 
       <g transform="translate(200 0)">
@@ -228,7 +228,7 @@ export default {
         <text font-size="0.6em">View Contract</text>
         <rect x="-80" y="-20" width="160" height="40" fill="#ffffff" fill-opacity="0" stroke="#ffffff"  stroke-width="0" @click="explorer" class="can-click" />      
       </g>
-      
+
     </g>
   </g>
 </template>
