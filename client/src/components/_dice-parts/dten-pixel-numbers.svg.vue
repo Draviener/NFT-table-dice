@@ -20,6 +20,7 @@ import DtenPixelEighteen from './numbers/pixel/dten-pixel-eighteen.svg.vue'
 import DtenPixelNineteen from './numbers/pixel/dten-pixel-nineteen.svg.vue'
 import DtenPixelTwenty from './numbers/pixel/dten-pixel-twenty.svg.vue'
 </script>
+
 <script>
 export default {
   props: {

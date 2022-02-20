@@ -109,9 +109,6 @@ export default {
           </g>
         </g>
 
-        <g v-else-if="!store.diceLoaded">
-              <text>Loading dice...</text>
-        </g>
         <g v-else>
           <g :transform="'translate(' + 280 + ' ' + -500 +')'" v-if="!menu">
             <menu-icon @click="openMenu()" />

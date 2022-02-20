@@ -29,8 +29,6 @@ export const web3dice = {
           window.location.reload()
       }
     })
-    this.provider.on("block", (blockNumber) => {
-    })
 
     //todo - if we were going multichain, we would need to get the correct
     //address for the contract based on which network is currently active
@@ -56,7 +54,7 @@ export const web3dice = {
       store.address = address
       this.getOwnedDice()
       store.web3.isConnected = true
-    })
+    }, this)
     
   },
 
@@ -71,6 +69,27 @@ export const web3dice = {
         params: [{ chainId: chainId }]
       });
     } catch (error) {
+      if (confirm('Chain not found in your wallet. Would you like us to try to add it?')) {
+        let data = [{
+          chainId: chainId,
+          chainName: 'Polygon Testnet',
+          nativeCurrency: {
+            name: 'MATIC',
+            symbol: 'MATIC',
+            decimals: 18
+          },
+          rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
+          blockExplorerUrls: ['https://mumbai.polygonscan.com/']
+        }]
+        try {
+          await window.ethereum.currentProvider.request({
+            method: 'wallet_addEthereumChain',
+            params: data
+          });
+        } catch (error) {
+          alert('We were unable to add the network.')
+        }
+      }
     }
   },
 
@@ -87,8 +106,8 @@ export const web3dice = {
       store.lastRoll[diceId] = roll
       setTimeout(() => {store.isRolling[diceId] = false}, 1000)
       return roll
-    } catch (err) {
-      console.log("Error: ", err)
+    } catch (error) {
+      console.log("Error: ", error)
       store.isRolling[diceId] = false
       return 'failed'
     }
@@ -97,11 +116,11 @@ export const web3dice = {
   async getTraits() {
     try {
       store.ownedDice.forEach(async (diceId, index) => {
-        store.diceTraits[diceId] = await this.diceContract.getTraits(diceId)
-        console.log(store.diceTraits[diceId])
-      })
-    } catch (err) {
-      console.log("Error: ", err)
+        store.diceTraits[index] = await this.diceContract.getTraits(diceId)
+        console.log(store.diceTraits[index])
+      }, this)
+    } catch (error) {
+      console.log("Error: ", error)
     }
   },
 
@@ -110,11 +129,10 @@ export const web3dice = {
     try {
       store.ownedDice  = await this.diceContract.tokenListOfOwner(store.address)
       await this.getTraits()
-    } catch (e) {
-      console.log("Error: ", err)
+    } catch (error) {
+      store.ownedDice  = []
+      console.log("Error: ", error)
     }
-    store.diceLoaded = true
-    return store.ownedDice
   }
   
 }

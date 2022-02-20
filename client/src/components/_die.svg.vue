@@ -3,8 +3,8 @@ import DtenGenericBackground from './_dice-parts/background/dten-generic-backgro
 import DtenGenericNumbers from './_dice-parts/dten-generic-numbers.svg.vue'
 import DtenPixelNumbers from './_dice-parts/dten-pixel-numbers.svg.vue'
 </script>
+
 <script>
-import { onMounted } from 'vue'
 import { store } from '../store.js'
 
 export default {
@@ -14,9 +14,6 @@ export default {
       default: 1
     },
   },
-  setup () {
-    this.tick()
-  },
   data () {
     return {
       rollingNumber: 1,
@@ -24,7 +21,7 @@ export default {
     }
   },
   watch: {
-    rolling(value, oldValue) {
+    rolling(value) {
       if (value) {
         this.rollNumbers()
       }
@@ -74,6 +71,7 @@ export default {
       if (store.diceTraits[nftid]) {
         return store.diceTraits[nftid].sides
       }
+      return 20
     },
 
   }
@@ -85,7 +83,7 @@ export default {
     <ellipse cx="0" cy="60" rx="60" ry="10" fill="#000000" opacity="0.25" stroke-width="0" />
     <g class="dice" :class="{rolling: rolling}">
       <g fill="#ffffff" stroke="#ffffff">
-      <animateTransform v-if="this.rolling" attributeName="transform"
+      <animateTransform v-if="rolling" attributeName="transform"
                         attributeType="XML"
                         type="rotate"
                         from="0"
