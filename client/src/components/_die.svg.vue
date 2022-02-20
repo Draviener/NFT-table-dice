@@ -51,25 +51,27 @@ export default {
       }
       return (this.diceid % this.sides + 1)
     },
-    background () {
-      return 1
-    },
     fontType () {
-      const typeId = this.diceid % 2
-      return typeId
+      if (store.diceTraits[this.diceid]) {
+        return store.diceTraits[this.diceid].font % 2
+      }
+      return this.diceid %2
     },
     fontColor () {
-      const colorId = this.diceid % 30
-      return store.colorIndex[colorId].fontColor
+      if (store.diceTraits[this.diceid]) {
+        return '#' + store.diceTraits[this.diceid].fgColor
+      }
+      return '#ffffff'
     },
     backgroundColor () {
-      const colorId = this.diceid % 30
-      return store.colorIndex[colorId].backgroundColor
+      if (store.diceTraits[this.diceid]) {
+        return '#' + store.diceTraits[this.diceid].bgColor
+      }
+      return '#000088'
     },
     sides () {
-      const nftid = store.ownedDice[this.diceid]
-      if (store.diceTraits[nftid]) {
-        return store.diceTraits[nftid].sides
+      if (store.diceTraits[this.diceid]) {
+        return store.diceTraits[this.diceid].sides
       }
       return 20
     },
