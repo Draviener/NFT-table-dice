@@ -2,6 +2,8 @@
 
 # PolyDice
 
+[dice.partavate.com](https://dice.partavate.com)
+
 ## NFT Tabletop Dice
 NFT Tabletop Dice are dice both a dice rolling dApp for tabletop gamers and collectable ERC721 NFTs. Dice you can roll and dice you can own.
 
@@ -14,4 +16,6 @@ NFT Tabletop Dice were conceptualized as an Entry for EthDenver 2022.
 - VueJS
 - EthersJS
 - Polygon
+
+Works best in metamask.
 
