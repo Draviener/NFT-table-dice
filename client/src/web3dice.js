@@ -6,7 +6,7 @@ export const web3dice = {
   provider: null,  
   signer: null,
   diceContract: null,
-  diceContractAddress: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512', //what will be the best way to populate this? A: (@excalq) the HH deploy task!
+  diceContractAddress: '0x57967e20B50aE9158ae91AD3EaD5a3C45d5773e9', //what will be the best way to populate this? A: (@excalq) the HH deploy task!
   async init() {
     try {
       this.provider = new ethers.providers.Web3Provider(window.ethereum,"any")
@@ -29,7 +29,6 @@ export const web3dice = {
       }
     })
     this.provider.on("block", (blockNumber) => {
-      console.log('block', blockNumber)
     })
 
     //todo - if we were going multichain, we would need to get the correct
@@ -54,9 +53,9 @@ export const web3dice = {
     
     this.signer.getAddress().then( address => {
       store.address = address
+      this.getOwnedDice()
+      store.web3.isConnected = true
     })
-    store.web3.isConnected = true
-
     
   },
 
@@ -64,7 +63,7 @@ export const web3dice = {
 
     //Todo: this will need to be smarter when we
     //release to polygon.
-    const chainId = '0x4'
+    const chainId = '0x13881'
     try {
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
@@ -82,12 +81,10 @@ export const web3dice = {
 
   async roll(diceId) {
     store.isRolling[diceId] = true
-    console.log('rolling')
     try {
-      const roll = await this.diceContract.roll(diceId)
+      const nonce = parseInt(new Date().getTime() % 512);
+      const roll = await this.diceContract.roll(diceId, nonce)
       store.lastRoll[diceId] = roll
-      console.log('roll', roll)
-      //store.isRolling[diceId] = false
       setTimeout(() => {store.isRolling[diceId] = false}, 1000)
       return roll
     } catch (err) {
@@ -109,9 +106,8 @@ export const web3dice = {
   },
 
   async getOwnedDice() {
-    const owned = [1,2,1,2,1,2]
-    store.ownedDice = owned
+    store.ownedDice  = await this.diceContract.tokenListOfOwner(store.address)
     console.log('You have dice', store.ownedDice)
-    return owned
+    return store.ownedDice
   }
 }

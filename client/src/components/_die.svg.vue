@@ -25,15 +25,15 @@ export default {
   watch: {
     rolling(value, oldValue) {
       if (value) {
-        this.showRandomNumber()
+        this.rollNumbers()
       }
     }
   },
   methods: {
-    showRandomNumber () {
+    rollNumbers () {
       this.rollingNumber = ((this.rollingNumber) % this.sides) + 1
       if (this.rolling) {
-        setTimeout(this.tick, 100)
+        setTimeout(this.rollNumbers, 200)
       }
     },
     displayValue () {
@@ -62,6 +62,9 @@ export default {
     color () {
       return 1
     },
+    sides () {
+      return 20
+    }
 
   }
 }

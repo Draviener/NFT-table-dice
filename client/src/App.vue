@@ -5,7 +5,6 @@ import Die from './components/_die.svg.vue'
 import DiceMenu from './components/DiceMenu.svg.vue'
 import { web3dice } from './web3dice.js'
 
-web3dice.getOwnedDice()
 </script>
 
 <script>
@@ -72,8 +71,8 @@ export default {
 
         <g v-else-if="!store.web3.isConnected">
           <text transform="translate(0 -50)">You are on the {{ chainName }} network.</text>
-          <g v-if="chainName != 'rinkeby'">
-            <text>Please switch to rinkeby</text>
+          <g v-if="chainName != 'maticmum'">
+            <text>Please switch to Polygon Mumbai</text>
             <g transform="translate(0 70)">
               <rect x="-120" y="-30" width="240" height="60" fill="#222222" rx="15" ry="15" />
               <text>Switch Networks</text>
