@@ -12,11 +12,11 @@ describe("tasks", () => {
     });
   });
 
-  describe("deploy-contract", () => {
+  describe("deploy-all-contracts", () => {
     it("calls through and returns the transaction object", async () => {
       sinon.stub(process.stdout, "write");
 
-      await run("deploy-contract");
+      await run("deploy-all-contracts");
       await expect(process.stdout.write).to.have.been.calledWithMatch(
         /Contract address: 0x[0-9a-fA-F]{40}/
       );

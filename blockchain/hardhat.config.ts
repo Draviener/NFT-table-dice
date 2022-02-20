@@ -8,7 +8,9 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-import("./tasks/deploy+mint");
+import("./tasks/deploy");
+import("./tasks/mint");
+import("./tasks/roll");
 
 import { HardhatUserConfig } from "hardhat/config";
 
