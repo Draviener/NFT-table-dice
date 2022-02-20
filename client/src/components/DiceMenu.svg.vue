@@ -229,11 +229,11 @@ export default {
         <rect x="-80" y="-20" width="160" height="40" fill="#ffffff" fill-opacity="0" stroke="#ffffff"  stroke-width="0" @click="explorer" class="can-click" />      
       </g>
 
-      <g transform="translate(0 10)">
-        <rect x="-100" y="-30" width="200" height="60" fill="#ff44dd" fill-opacity="0.5" stroke="#ff44dd" stroke-opacity="0.2" stroke-width="2" rx="25" ry="25" />      
+      <g transform="translate(0 20)">
+        <rect x="-100" y="-40" width="200" height="80" fill="#ff44dd" fill-opacity="0.5" stroke="#ff44dd" stroke-opacity="0.2" stroke-width="2" rx="25" ry="25" />      
         <text font-size="0.9em" v-if="haveDice">Let's Play!</text>
         <text font-size="0.6em" v-else>Close</text>
-        <rect x="-100" y="-30" width="200" height="60" fill="#ffffff" fill-opacity="0" stroke="#ffffff"  stroke-width="0" @click="close" class="can-click" />      
+        <rect x="-100" y="-40" width="200" height="80" fill="#ffffff" fill-opacity="0" stroke="#ffffff"  stroke-width="0" @click="close" class="can-click" />      
       </g>
     </g>
   </g>
